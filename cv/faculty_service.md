@@ -20,6 +20,11 @@ Academic advising concluded after 2025/2026 with the university transition to ce
 - 2012/2013 Academic year: 35 students
 - 2011/2012 Academic year: 14 students
 
+### Curriculum Development
+
+- Designed the M.S. Bioinformatics curriculum and secured program approval (2024-2025).
+- Committee lead, BIOL 201-202 curriculum realignment (2023 - 2025).
+
 ### Faculty Search Committees
 
 - Chair, Tenure-Track Professor of Biochemistry Search Committee (2025-2026), successful hire
@@ -101,6 +106,7 @@ Academic advising concluded after 2025/2026 with the university transition to ce
 
 ### Other service
 
+- Contributor to Biochemistry program assessment (c. 2011 - present).
 - Department Website Developer (2010 - present)
 - Fact Sheet (B.S., Biochemistry)
 

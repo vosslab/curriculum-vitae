@@ -9,7 +9,7 @@ GitHub account: <https://github.com/vosslab>
    libraries, and algorithmic WeBWorK assessments.
    <https://github.com/vosslab/peptidyle-learning-engine>
 
-1. **Biology Problems (2025)**
+1. **Biology Problems**
    Free, open biology problem sets that help students practice and give educators ready-to-use questions for courses, homework, quizzes, and learning-management systems.
    *https://biologyproblems.org/*
 
@@ -19,7 +19,7 @@ GitHub account: <https://github.com/vosslab>
 
 1. **3v: Voss Volume Voxelator**
    Programs for the assessment of protein volumes using the rolling probe method.
-   *<http://3vee.molmovdb.org/>* *<https://github.com/vosslab/vossvolvox>*
+   *<https://vosslab.github.io/vossvolvox-pages/>* *<https://github.com/vosslab/vossvolvox>*
 
 1. **TiltPicker**
    Tool for picking particles from image tilt pairs for random conical tilt (RCT).

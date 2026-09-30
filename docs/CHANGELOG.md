@@ -2,6 +2,21 @@
 
 ### CV publishing
 
+- Removed the year from the Biology Problems heading to match the other software titles.
+
+- Updated the 3V website link to the author-supplied VossVolvox Pages address.
+
+- Reduced Teaching Experience semester headings from H3 to H4 for a quieter visual hierarchy.
+
+- Added ongoing Biochemistry program assessment contributions under Faculty Service, without
+  a leadership title; clarified the approximate date range as c. 2011-present from the
+  author's recollection of the program launch.
+
+- Moved Curriculum Development from Teaching Experience to Faculty Service.
+
+- Promoted Research Appointments titles to subsection headings so role and date lines are
+  visually and semantically distinct from collaborator and affiliation paragraphs.
+
 - Separated non-CV documentation checks from publication gates; added bounded dependency
   retries, job timeouts, HarfBuzz Subset, and serialized runs/deployments. Optional download
   artifact failures no longer block the required Pages artifact and deployment.

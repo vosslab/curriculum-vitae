@@ -107,3 +107,14 @@ origin belongs there too. Rules: [REPO_STYLE.md](REPO_STYLE.md).
 - I have been a required member of the PULSE committee.
 - Make the Pages workflow robust: handle imperfect inputs, data, state, and behavior according
   to their context and impact, recovering gracefully to preserve useful operation where possible.
+- Bold alone does not sufficiently distinguish Research Appointments titles from their
+  collaborator and other detail paragraphs; give the titles clearer heading hierarchy.
+- Curriculum Development belongs under Faculty Service, not Teaching Experience.
+- I have assisted with all Biochemistry program assessment since the beginning, while
+  avoiding a leadership role. My Spring 2011 advanced biochemistry teaching was a launching
+  point for the major, which I recall may have formally started in Fall 2011; use an
+  approximate 2011 start for assessment service.
+- Make Teaching Experience semester headings one heading level smaller (H3 to H4).
+- The current 3V website is <https://vosslab.github.io/vossvolvox-pages/>.
+- Omit the year from the Biology Problems software heading, consistent with the other
+  software headings.

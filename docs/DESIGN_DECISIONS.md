@@ -433,3 +433,52 @@ ASVS 8.2.1: publication permissions remain confined to the main-branch deploymen
 
 **Owner.** [../.github/workflows/build.yml](../.github/workflows/build.yml) and
 [MAINTENANCE.md](MAINTENANCE.md).
+
+### Research appointment subsection headings
+
+**Decision.** Use level-three headings for each Research Appointments role/institution and
+parenthesized date range, under the level-two section heading.
+
+**Why.** Bold body paragraphs did not clearly distinguish appointments from their supporting
+details. Existing heading styles provide larger type, space above, and keep-with-next behavior.
+
+**Consequence.** PDF, HTML, and Word share a semantic appointment hierarchy; collaborators,
+affiliations, and grants remain paragraphs, with activities in bullets. This supersedes the
+earlier bold-paragraph treatment for Research Appointments.
+
+**Owner.** Author request; repository maintainer implementation.
+
+### Curriculum development as service
+
+**Decision.** Place Curriculum Development in Faculty Service, after Advising Responsibilities.
+
+**Why.** The author classifies program development and curriculum realignment as service.
+
+**Consequence.** Both existing entries move together; Teaching Experience contains the teaching
+load summary and course history.
+
+**Owner.** Author.
+
+### Biochemistry assessment contribution
+
+**Decision.** List ongoing Biochemistry program assessment contributions under Other service.
+
+**Why.** The author confirms sustained participation and explicitly disclaims leadership.
+
+**Consequence.** Use contributor wording without a chair or coordinator title. Use
+"c. 2011 - present", based on the author's recollection of Spring 2011 teaching
+launching the program and a possible Fall 2011 formal major start.
+
+**Owner.** Author confirmation; repository maintainer wording.
+
+### Smaller teaching semester headings
+
+**Decision.** Use H4 for semester headings within Teaching Experience, retaining H3 for
+Teaching Assistantships Prior to Faculty Appointment.
+
+**Why.** The author requested less prominent semester headings.
+
+**Consequence.** Existing H4 styles reduce size and spacing and add indentation across the
+generated formats. Semester headings use the explicitly requested level below H2.
+
+**Owner.** Author.
