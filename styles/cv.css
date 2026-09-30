@@ -1,3 +1,7 @@
+:root {
+  --cv-body-font: "Atkinson Hyperlegible Next", sans-serif;
+  --cv-link-color: #154f83;
+}
 @font-face {
   font-family: "Atkinson Hyperlegible Next";
   src: url("../assets/fonts/AtkinsonHyperlegibleNext-Regular.ttf");
@@ -26,6 +30,11 @@
   font-family: "IBM Plex Sans Condensed";
   src: url("../assets/fonts/IBMPlexSansCondensed-Regular.ttf");
 }
+@font-face {
+  font-family: "IBM Plex Sans Condensed";
+  font-style: italic;
+  src: url("../assets/fonts/IBMPlexSansCondensed-Italic.ttf");
+}
 @page {
   size: Letter;
   margin: 0.6in;
@@ -36,21 +45,23 @@
   }
 }
 body {
-  font-family: "Atkinson Hyperlegible Next", sans-serif;
+  font-family: var(--cv-body-font);
   font-size: 11pt;
   line-height: 1.1;
   color: #000;
+  background: #fff;
+  color-scheme: light;
 }
 h1 { font-size: 26pt; font-weight: 400; text-align: center; margin: 0 0 6pt; }
 h2 { font-size: 14pt; border-bottom: 0.5pt solid #444; padding-bottom: 3pt; margin: 10pt 0 4pt; }
 h3 { font-size: 12pt; margin: 7pt 0 3pt; }
 h4 { font-size: 11pt; margin: 6pt 0 3pt; }
 h1, h2, h3, h4 { break-after: avoid; }
-p { margin: 0 0 5pt; orphans: 2; widows: 2; }
+p { margin: 0 0 5pt; orphans: 2; widows: 2; break-inside: avoid; }
 ul, ol { padding-left: 18pt; margin: 0 0 5pt; }
 li { margin-bottom: 2pt; break-inside: avoid; }
 li p { margin-bottom: 2pt; }
-a { color: #154f83; text-decoration: underline; overflow-wrap: anywhere; }
+a { color: var(--cv-link-color); text-decoration: underline; overflow-wrap: anywhere; }
 code, pre { font-family: "Atkinson Hyperlegible Mono", monospace; }
 .cv-url { font-family: "IBM Plex Sans Condensed", sans-serif; font-variant-numeric: slashed-zero; }
 .student-list { break-inside: avoid; }

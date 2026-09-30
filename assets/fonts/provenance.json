@@ -43,5 +43,10 @@
     "file": "OFL-IBMPlex.txt",
     "url": "https://raw.githubusercontent.com/IBM/plex/763c36ef9117782905ae010056dfbe8fd2653a25/LICENSE.txt",
     "sha256": "7e6b2818edbd8f6a01ae80641cc8f16a51080d08fb4e532be3a0b6f74adb07da"
+  },
+  {
+    "file": "IBMPlexSansCondensed-Italic.ttf",
+    "url": "https://raw.githubusercontent.com/IBM/plex/763c36ef9117782905ae010056dfbe8fd2653a25/packages/plex-sans-condensed/fonts/complete/ttf/IBMPlexSansCondensed-Italic.ttf",
+    "sha256": "368d896f1cd1dc9f9b926135bd5c3154aa6f3dcd53f2b330bce487968a3a3e4a"
   }
 ]

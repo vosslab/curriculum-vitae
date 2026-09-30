@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Build distribution documents from CV.md; never import generated documents."""
+"""Build distribution documents from cv/*.md; never import generated documents."""
 
 import copy
 import hashlib
@@ -19,7 +19,8 @@ from docx.shared import Inches, Pt, RGBColor
 from fontTools.ttLib import TTFont
 from lxml import etree
 from pypdf import PdfReader
-from weasyprint import HTML, CSS, default_url_fetcher
+from weasyprint import HTML
+from weasyprint.urls import URLFetcher
 from weasyprint.text.fonts import FontConfiguration
 
 
@@ -33,12 +34,27 @@ W_NS = "http://schemas.openxmlformats.org/wordprocessingml/2006/main"
 R_NS = "http://schemas.openxmlformats.org/package/2006/relationships"
 FONT_FACES = [
 	(MAIN_FONT, "Regular", "AtkinsonHyperlegibleNext-Regular.ttf"),
-	(MAIN_FONT, "Italic", "AtkinsonHyperlegibleNext-Italic.ttf"),
 	(MAIN_FONT, "Bold", "AtkinsonHyperlegibleNext-Bold.ttf"),
+	(MAIN_FONT, "Italic", "AtkinsonHyperlegibleNext-Italic.ttf"),
 	(MAIN_FONT, "BoldItalic", "AtkinsonHyperlegibleNext-BoldItalic.ttf"),
 	(MONO_FONT, "Regular", "AtkinsonHyperlegibleMono-Regular.ttf"),
 	(URL_FONT, "Regular", "IBMPlexSansCondensed-Regular.ttf"),
+	(URL_FONT, "Italic", "IBMPlexSansCondensed-Italic.ttf"),
 ]
+
+
+def assemble_source():
+	"""Read the plain section-order file, with every source included exactly once."""
+	root = ROOT / "cv"
+	names = (root / "sections.txt").read_text().splitlines()
+	if not names or len(names) != len(set(names)):
+		raise ValueError("Section order must contain each source exactly once")
+	for name in names:
+		if Path(name).name != name or not name.endswith(".md"):
+			raise ValueError(f"Invalid section filename: {name}")
+	if set(names) != {path.name for path in root.glob("*.md")}:
+		raise ValueError("Section order and Markdown source files do not match")
+	return "\n\n".join((root / name).read_text().strip() for name in names) + "\n"
 
 
 def pandoc(*arguments, text=None):
@@ -148,6 +164,9 @@ def set_font(style, family=MAIN_FONT, size=11, bold=False):
 	rpr = style.element.get_or_add_rPr()
 	fonts = rpr.find(qn("w:rFonts"))
 	if fonts is not None:
+		for attr in list(fonts.attrib):
+			if "theme" in attr.lower():
+				del fonts.attrib[attr]
 		for attr in ("ascii", "hAnsi", "cs", "eastAsia"):
 			fonts.set(qn("w:" + attr), family)
 	lang = OxmlElement("w:lang")
@@ -184,12 +203,14 @@ def reference_document(path):
 			border.append(bottom)
 			style.element.get_or_add_pPr().append(border)
 	set_font(doc.styles["Title"], size=26)
+	for border in doc.styles["Title"].element.xpath("./w:pPr/w:pBdr"):
+		border.getparent().remove(border)
 	doc.styles["Title"].paragraph_format.alignment = WD_ALIGN_PARAGRAPH.CENTER
 	doc.styles["Title"].paragraph_format.space_after = Pt(6)
 	for name, font in [("Verbatim Char", MONO_FONT), ("CV URL", URL_FONT), ("Hyperlink", MAIN_FONT)]:
 		style = doc.styles[name] if name in doc.styles else doc.styles.add_style(name, WD_STYLE_TYPE.CHARACTER)
 		set_font(style, family=font)
-		if name == "Hyperlink":
+		if name in {"Hyperlink", "CV URL"}:
 			style.font.color.rgb = RGBColor.from_string("154F83")
 			style.font.underline = True
 	p = section.footer.paragraphs[0]
@@ -207,6 +228,23 @@ def reference_document(path):
 def finish_docx(path):
 	"""Replace private markers with continuous native column sections."""
 	doc = Document(path)
+	# Pandoc's list definitions must use the same bundled font as the document.
+	for level in doc.part.numbering_part.element.xpath(".//w:lvl"):
+		fmt = level.find(qn("w:numFmt"))
+		if fmt is not None and fmt.get(qn("w:val")) == "bullet":
+			level.find(qn("w:lvlText")).set(qn("w:val"), "\u2022")
+			for font in level.findall(f"./{{{W_NS}}}rPr/{{{W_NS}}}rFonts"):
+				for attribute in list(font.attrib):
+					del font.attrib[attribute]
+				font.set(qn("w:ascii"), MAIN_FONT)
+				font.set(qn("w:hAnsi"), MAIN_FONT)
+	for paragraph in doc.paragraphs:
+		if paragraph._p.xpath("./w:pPr/w:numPr"):
+			paragraph.paragraph_format.space_before = Pt(0)
+			paragraph.paragraph_format.space_after = Pt(2)
+			paragraph.paragraph_format.keep_together = True
+		elif paragraph.style.name in {"Body Text", "First Paragraph"}:
+			paragraph.paragraph_format.keep_together = True
 	base = copy.deepcopy(doc.element.body.sectPr)
 	for paragraph in list(doc.paragraphs):
 		ppr = paragraph._p.pPr
@@ -216,10 +254,7 @@ def finish_docx(path):
 			continue
 		ppr.remove(style)
 		props = copy.deepcopy(base)
-		kind = props.find(qn("w:type"))
-		if kind is None:
-			kind = OxmlElement("w:type")
-			props.insert(0, kind)
+		kind = props.get_or_add_type()
 		kind.set(qn("w:val"), "continuous")
 		columns = props.find(qn("w:cols"))
 		if columns is None:
@@ -233,9 +268,8 @@ def finish_docx(path):
 		paragraph.paragraph_format.line_spacing = Pt(1)
 		paragraph.paragraph_format.keep_with_next = name == "CVColumnsStart"
 	# The final one-column section must also begin continuously.
-	kind = OxmlElement("w:type")
+	kind = doc.element.body.sectPr.get_or_add_type()
 	kind.set(qn("w:val"), "continuous")
-	doc.element.body.sectPr.insert(0, kind)
 	doc.core_properties.title = "Neil R. Voss - Curriculum Vitae"
 	doc.core_properties.author = "Neil R. Voss"
 	doc.core_properties.language = "en-US"
@@ -292,16 +326,18 @@ def embed_fonts(path):
 			archive.writestr(name, data)
 
 
-def local_asset_fetcher(url, *args, **kwargs):
+class LocalAssetFetcher(URLFetcher):
 	"""ASVS 5.3.2: the renderer reads only bundled assets, never remote URLs."""
-	from urllib.parse import unquote, urlparse
-	parsed = urlparse(url)
-	if parsed.scheme != "file" or parsed.netloc not in {"", "localhost"}:
-		raise ValueError(f"Rendering requires a local asset: {url}")
-	path = Path(unquote(parsed.path)).resolve()
-	if not any(path.is_relative_to(ROOT / folder) for folder in ("assets", "styles")):
-		raise ValueError(f"Asset outside the bundled directories: {path}")
-	return default_url_fetcher(url, *args, **kwargs)
+
+	def fetch(self, url, headers=None):
+		from urllib.parse import unquote, urlparse
+		parsed = urlparse(url)
+		if parsed.scheme != "file" or parsed.netloc not in {"", "localhost"}:
+			raise ValueError(f"Rendering requires a local asset: {url}")
+		path = Path(unquote(parsed.path)).resolve()
+		if not any(path.is_relative_to(ROOT / folder) for folder in ("assets", "styles")):
+			raise ValueError(f"Asset outside the bundled directories: {path}")
+		return super().fetch(url, headers)
 
 
 def verify_fonts():
@@ -319,7 +355,8 @@ def main():
 	verify_fonts()
 	OUTPUT.mkdir(exist_ok=True)
 	(OUTPUT / "pdf").mkdir(exist_ok=True)
-	document = json.loads(pandoc("CV.md", "-f", "gfm", "-t", "json"))
+	source = assemble_source()
+	document = json.loads(pandoc("-f", "gfm", "-t", "json", text=source))
 	with tempfile.TemporaryDirectory(prefix="cv-build-", dir=OUTPUT) as temporary:
 		temporary = Path(temporary)
 		reference = temporary / "reference.docx"
@@ -336,7 +373,8 @@ def main():
 			+ body + '</main></body></html>')
 		fonts = FontConfiguration()
 		pdf_path = temporary / "neil_voss_cv.pdf"
-		HTML(string=html, base_url=OUTPUT.as_uri() + "/", url_fetcher=local_asset_fetcher).write_pdf(
+		HTML(string=html, base_url=OUTPUT.as_uri() + "/",
+			url_fetcher=LocalAssetFetcher(allowed_protocols={"file"}, fail_on_errors=True)).write_pdf(
 			pdf_path, font_config=fonts, pdf_variant="pdf/ua-1")
 		pdf = PdfReader(pdf_path)
 		if not pdf.pages or "/StructTreeRoot" not in pdf.trailer["/Root"]:
@@ -345,6 +383,7 @@ def main():
 		docx_path.replace(OUTPUT / docx_path.name)
 		pdf_path.replace(OUTPUT / "pdf" / pdf_path.name)
 		(OUTPUT / "neil_voss_cv.html").write_text(html)
+		(OUTPUT / "CV.md").write_text(source)
 	print(f"Built {len(pdf.pages)} PDF pages and an accessible-structure DOCX in {OUTPUT}")
 
 

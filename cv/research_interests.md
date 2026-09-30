@@ -1,5 +1,16 @@
 ## Research Interests
 
-My research has shifted toward education-focused software development in biology and bioinformatics. I develop open educational resources and computational tools that support student learning. I received a grant to release OER homework questions, available at [https://biologyproblems.org/](https://biologyproblems.org/)\
-My work sits at the intersection of bioinformatics, programming, and education. Current projects include large-scale creation and evaluation of free homework problems, computational biology tools for teaching and research, and experiments with AI agents to streamline scientific workflow.\
-I also maintain interest in structural biology and the computational analysis of large macromolecular assemblies, including viruses and ribosomes. Related work includes method development for 3D electron microscopy, geometric approaches for analyzing existing structures, and low-cost 3D printing for structure visualization. In parallel, I run student-driven structural projects that include protein purification, with occasional wet-lab targets for potentialCryoEM studies.
+My research has shifted toward education-focused software development in biology and bioinformatics.
+I develop open educational resources and computational tools that support student learning. I
+received a grant to release OER homework questions, available at
+[https://biologyproblems.org/](https://biologyproblems.org/)
+
+My work sits at the intersection of bioinformatics, programming, and education. Current projects
+include large-scale creation and evaluation of free homework problems, computational biology tools
+for teaching and research, and experiments with AI agents to streamline scientific workflow.
+
+I also maintain interest in structural biology and the computational analysis of large
+macromolecular assemblies, including viruses and ribosomes. Related work includes method development
+for 3D electron microscopy, geometric approaches for analyzing existing structures, and low-cost 3D
+printing for structure visualization. In parallel, I run student-driven structural projects that
+include protein purification, with occasional wet-lab targets for potentialCryoEM studies.

@@ -49,7 +49,18 @@ collect_ignore = ["e2e", "playwright"]
 #       "ascii_compliance": ["human_readable-*.html"],
 #       "pyflakes_code_lint": ["devel/scratch_*.py"],
 #   }
-REPO_HYGIENE_FILTERS = {}
+# Preserve upstream license bytes so their recorded download checksums remain valid.
+REPO_HYGIENE_FILTERS = {
+	"whitespace": ["assets/fonts/OFL-*.txt"],
+}
+
+
+def pytest_addoption(parser):
+	"""Expose the read-only mode already supported by the vendored hygiene checks."""
+	parser.addoption(
+		"--no-ascii-fix", action="store_true", default=False,
+		help="Report character and whitespace issues without rewriting sources.",
+	)
 
 
 # === OPTIONAL_HELPERS_MENU ===
