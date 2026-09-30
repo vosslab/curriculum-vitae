@@ -16,3 +16,4 @@ _temp*.?*
 # ADD YOUR CUSTOM IGNORES BELOW
 # Propagation preserves this section.
 # Template-only ignores.
+/raw/

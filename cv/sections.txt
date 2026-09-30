@@ -1,0 +1,14 @@
+profile.md
+current_position.md
+education.md
+research_interests.md
+research_appointments.md
+teaching.md
+faculty_service.md
+software.md
+research_supervision.md
+honors.md
+grants.md
+publications.md
+presentations.md
+social_media.md
