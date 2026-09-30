@@ -10,7 +10,11 @@ permissions:
 
 # Serialize each branch's complete run so an older slow build cannot deploy last.
 concurrency:
+<<<<<<< HEAD
   group: cv-${{ github.workflow }}-${{ github.event_name }}-${{ github.ref }}
+=======
+  group: cv-${{ github.workflow }}-${{ github.ref }}
+>>>>>>> 91815c9 (Separated non-CV documentation checks from publication gate... (+1 more))
   cancel-in-progress: false
 
 jobs:

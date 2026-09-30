@@ -14,7 +14,7 @@
 
 Use Bash, Python 3.12 or newer, Pandoc 3.1 or newer, and Pango. On macOS, the system tools can be
 installed with `brew install pandoc pango`. On Debian/Ubuntu, use
-`sudo apt-get install pandoc libpango-1.0-0 libpangoft2-1.0-0`.
+`sudo apt-get install pandoc libpango-1.0-0 libpangoft2-1.0-0 libharfbuzz-subset0`.
 
 ```bash
 source source_me.sh
@@ -62,10 +62,18 @@ duplicated, or unlisted sections. Keep layout changes in [../styles/cv.css](../s
 source source_me.sh && python3 -m pytest tests/ --no-ascii-fix
 ```
 
-The included GitHub Actions workflow runs the checks and builds PDF/DOCX artifacts after a push.
-After a successful run, download the `neil-voss-cv` artifact from the repository's Actions tab.
-Successful builds on `main` also deploy the HTML CV, PDF, and DOCX to GitHub Pages.
+The included GitHub Actions workflow checks CV sources and conversion before building documents.
+Non-CV documentation checks run independently: their failures remain visible but do not block
+publication of a valid CV. The full local test command above still checks everything.
+Download the optional `neil-voss-cv` artifact from the repository's Actions tab when its upload
+succeeds. Successful builds and required Pages artifact uploads on `main` deploy the HTML CV,
+PDF, and DOCX to GitHub Pages even if the optional download upload fails.
 Pull requests build and test without publishing. Generated files are never committed.
+
+Package downloads have bounded retries, and jobs have time limits. Runs for the same branch are
+serialized; active deployments finish before the next deployment starts. Build failures prevent
+deployment, preserving the previously published site. After an infrastructure failure, use the
+Actions rerun control; validation failures require correcting the source.
 
 For initial setup, open repository **Settings > Pages** and select **GitHub Actions** as the
 build source. Commit and push the workflow and source changes to `main`, then watch the

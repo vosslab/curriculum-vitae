@@ -394,13 +394,42 @@ the teaching-load/contact-hour statement.
 
 ### PULSE committee membership
 
-**Decision.** Add PULSE Committee membership based on the author's confirmation. Omit dates
-until the term is established; describe the role simply as Member.
+**Decision.** Add PULSE Committee membership based on the author's confirmation and describe
+the documented 2026 Biology program curriculum and assessment rubric review.
 
 **Why.** Required service is still committee service. The SERVICE archive contains 2015 PULSE
 materials and the author's September 2022 Pedagogical Practices document, but neither establishes
-the appointment start or whether it remains ongoing.
+the appointment start. Subsequently supplied emails titled PULSE Rubrics (August 30, 2026),
+Re: PULSE Bio Rubric Meeting (September 11, 2026), and PULSE Bio Rubric Meeting
+(September 30, 2026) include the author in the Biology PULSE revisit group. They describe
+curriculum rubric review followed by assessment rubric review, with recurring meetings during
+the year. These support current 2026 service alongside the author's membership confirmation.
 
-**Consequence.** Do not infer a 2015 or 2022 start from folder contents or claim a leadership role.
+**Consequence.** The listed 2026 date identifies documented activity, not the first year of
+membership. Do not infer a 2015 or 2022 start or claim a leadership role. Five BRI Pulse benefits
+newsletters and one pulse EPR spectrometer email are unrelated to this committee. Keep raw
+sources unchanged and unlinked; do not reproduce meeting access details in repository docs.
 
 **Owner.** [../cv/faculty_service.md](../cv/faculty_service.md).
+
+### Failure handling in Pages workflow
+
+**Decision.** Gate publication on CV-source hygiene, conversion tests, successful document
+generation, and the required Pages artifact. Run other repository hygiene checks independently
+and retain their failure status. Treat the separate downloadable document artifact as optional.
+
+**Why.** A missing maintainer-guide link should remain actionable without preventing publication
+of an otherwise valid CV. Conversely, missing CV sections or conversion failures must not produce
+an incomplete replacement for the live site. Bounded download retries address transient network
+failures; timeouts cap stalled jobs. Install HarfBuzz Subset as required by WeasyPrint's documented
+Ubuntu dependencies.
+
+**Consequence.** The overall workflow can be red from repository documentation while Pages
+deployment succeeds. The full local suite still checks all files. Same-ref runs are serialized,
+and active Pages deployments are not cancelled by newer ones. Pending runs may be superseded
+by newer runs under GitHub concurrency rules. Build failures leave the existing published site
+intact. No broad continue-on-error applies to content validation, builds, or Pages upload.
+ASVS 8.2.1: publication permissions remain confined to the main-branch deployment job.
+
+**Owner.** [../.github/workflows/build.yml](../.github/workflows/build.yml) and
+[MAINTENANCE.md](MAINTENANCE.md).

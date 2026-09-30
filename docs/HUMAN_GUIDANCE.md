@@ -105,3 +105,5 @@ origin belongs there too. Rules: [REPO_STYLE.md](REPO_STYLE.md).
 - Use the author-supplied faculty handbook revised April 18, 2025 as a terminology reference.
 - Do not link to files in `raw/`. Identify source material in prose when needed.
 - I have been a required member of the PULSE committee.
+- Make the Pages workflow robust: handle imperfect inputs, data, state, and behavior according
+  to their context and impact, recovering gracefully to preserve useful operation where possible.

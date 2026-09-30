@@ -2,6 +2,13 @@
 
 ### CV publishing
 
+- Separated non-CV documentation checks from publication gates; added bounded dependency
+  retries, job timeouts, HarfBuzz Subset, and serialized runs/deployments. Optional download
+  artifact failures no longer block the required Pages artifact and deployment.
+
+- Read the supplied PULSE emails and added the documented 2026 Biology curriculum and
+  assessment rubric review to the committee entry; earlier service dates remain unresolved.
+
 - Added author-confirmed PULSE committee membership; dates remain pending confirmation.
 
 - Fixed the Pages validation blocker by replacing a link to the absent tools guide with
