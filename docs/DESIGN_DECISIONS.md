@@ -89,3 +89,20 @@ and typographic punctuation normalization.
 author's direction. The original "Last Modified" line is historical source text, not a build date.
 
 **Owner.** The Markdown files under `cv/`.
+
+### Citation and hierarchy presentation
+
+**Decision.** Use native ordered lists for publications, presentations, and software; apply NLM
+journal-reference conventions with a linked note. Justify prose in document outputs and wide HTML,
+use left alignment on narrow screens and in lists, and progressively indent subsection headings.
+
+**Why.** The author requested clearer grouping, less crowded headings, and an explicit biomedical
+citation convention. Complete verified bylines replace the original mid-list omissions.
+
+**Consequence.** Markdown remains simple. Numbering is generated, software lists restart by role,
+and document pagination may grow. Bibliographic verification and unresolved gaps are recorded in
+[CITATION_STYLE.md](CITATION_STYLE.md); the earlier formatting-only rule now permits these requested
+citation changes, while factual uncertainties remain visible for author review.
+
+**Owner.** [../styles/cv.css](../styles/cv.css), [../build_cv.py](../build_cv.py), and
+[CITATION_STYLE.md](CITATION_STYLE.md).

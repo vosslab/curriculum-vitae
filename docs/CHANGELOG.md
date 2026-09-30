@@ -2,6 +2,10 @@
 
 ### CV publishing
 
+- Numbered publications, presentations, and software entries using ordinary GFM lists. Increased
+  heading separation, stepped heading indentation, and justified prose in PDF/DOCX and wide HTML.
+- Standardized journal references toward NLM format, added a linked format note, and restored seven
+  complete publication bylines from bibliographic sources documented in the citation guide.
 - Added a simple GitHub Pages site with the HTML CV and direct PDF/DOCX links. Adapted the
   supplied deployment template into the existing build, with publication restricted to `main`.
 - Documented Pages setup and public links; staged only CV documents, CSS, and licensed font assets.

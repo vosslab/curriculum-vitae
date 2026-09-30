@@ -21,6 +21,9 @@ origin belongs there too. Rules: [REPO_STYLE.md](REPO_STYLE.md).
 - Prefer the newer Ubuntu LTS version for the GitHub Actions build runner.
 - Publish a simple GitHub Pages CV with PDF and DOCX links, using the starter repository's
   deploy-pages workflow as the template.
+- Number publications, posters/presentations, and software entries. Fully justify prose such as
+  Research Interests, give headings more space before and less after, and vary heading indentation.
+- Use NLM journal citations and cite the format's ANSI/NISO basis for readers from other disciplines.
 - Software Development and Support needs a later author-led update: I reported 126 GitHub
   repositories on September 30, 2026. This is guidance for a future edit, not an automatically
   verified CV statistic or authorization to rewrite the existing section.

@@ -1,5 +1,20 @@
 # CV validation
 
+## Numbering and layout revision
+
+The later September 30 revision produces a 15-page PDF and an 18-page LibreOffice rendering of
+the DOCX. All pages were inspected in rendered contact sheets; printable-boundary checks found
+no clipped text. The browser passes at 390, 768, and 1280 pixels without horizontal overflow.
+Prose is justified in PDF/DOCX and wide HTML; narrow HTML and lists remain left aligned.
+
+The sources render as 26 publication entries, 27 presentation entries, and software lists of
+8, 2, and 2 entries under their respective roles. Software and presentation words are unchanged;
+all original publication DOIs remain, including duplicates. Journal citation formatting and seven
+verified byline expansions supersede the original migration's exact-text preservation for those
+entries; sources and unresolved metadata gaps are in [CITATION_STYLE.md](CITATION_STYLE.md).
+All 119 repository checks pass, along with Python static checks and `git diff --check`.
+These results are local; revised artifacts still require a push for the Pages workflow to publish.
+
 ## Content preservation
 
 The original DOCX, Markdown, and PDF exports in ignored `raw/` were used for migration. A normalized

@@ -32,8 +32,8 @@ def sample():
 
 ## Publications
 
-- A publication with [a link](https://example.org/paper).
-- A second publication.
+1. A publication with [a link](https://example.org/paper).
+1. A second publication.
 
 https://example.org/a/particularly/long/research/project/url
 """))
@@ -72,6 +72,14 @@ def test_docx_has_native_lists_columns_and_embedded_fonts(sample, tmp_path):
 	assert [s._sectPr.find(cv.qn("w:cols")).get(cv.qn("w:num"), "1") for s in doc.sections] == ["1", "2", "1"]
 	assert not doc.tables
 	assert doc.core_properties.language == "en-US"
+	assert doc.styles["Body Text"].paragraph_format.alignment == cv.WD_ALIGN_PARAGRAPH.JUSTIFY
+	for name in ("Heading 1", "Heading 2", "Heading 3"):
+		spacing = doc.styles[name].paragraph_format
+		assert spacing.space_before > spacing.space_after
+	assert (doc.styles["Heading 1"].paragraph_format.left_indent
+		< doc.styles["Heading 2"].paragraph_format.left_indent
+		< doc.styles["Heading 3"].paragraph_format.left_indent)
+	assert doc.part.numbering_part.element.xpath('.//w:numFmt[@w:val="decimal"]')
 	assert any(p._p.xpath("./w:pPr/w:numPr") for p in doc.paragraphs)
 	assert "CVColumns" not in " ".join(p.text for p in doc.paragraphs)
 	assert "First student, master's" in [p.text for p in doc.paragraphs]

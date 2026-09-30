@@ -33,12 +33,12 @@ based on ANSI/NISO Z39.29-2005 (R2010), Bibliographic References.
    J Struct Biol. 2015;192(2):222-34. doi: 10.1016/j.jsb.2015.06.012.
    Published exclusively with Roosevelt students.
 
-1. Marabini R, Carragher B, Chen S, et al.
+1. Marabini R, Carragher B, Chen S, Chen J, Cheng A, Downing KH, Frank J, Grassucci RA, Heymann JB, Jiang W, Jonic S, Liao HY, Ludtke SJ, Patwari S, Piotrowski AL, Quintana A, Sorzano COS, Stahlberg H, Vargas J, Voss NR, Chiu W, Carazo JM.
    CTF challenge: result summary.
    J Struct Biol. 2015;190(3):348-59. doi: 10.1016/j.jsb.2015.04.003.
    With two Roosevelt students: Piotrowski AL and Patwari S.
 
-1. Fiedler JD, Higginson C, Hovlid ML, et al., Voss NR, Potter CS, Carragher B, Finn MG.
+1. Fiedler JD, Higginson C, Hovlid ML, Kislukhin AA, Castillejos A, Manzenrieder F, Campbell MG, Voss NR, Potter CS, Carragher B, Finn MG.
    Engineered mutations change the structure and stability of a virus-like particle.
    Biomacromolecules. 2012;13(8):2339-48. doi: 10.1021/bm300590x.
 
@@ -62,11 +62,11 @@ based on ANSI/NISO Z39.29-2005 (R2010), Bibliographic References.
    Multivalent display and receptor-mediated endocytosis of transferrin on virus-like particles.
    Chembiochem. 2010 Jun 14;11(9):1273-9.
 
-1. Katpally U, Voss NR, Cavazza T, Taube S, Rubin JR, et al., Virgin HW 4th, Wobus CE, Smith TJ.
+1. Katpally U, Voss NR, Cavazza T, Taube S, Rubin JR, Young VL, Stuckey J, Ward VK, Virgin HW 4th, Wobus CE, Smith TJ.
    High-resolution cryo-electron microscopy structures of murine norovirus 1 and rabbit hemorrhagic disease virus reveal marked flexibility in the receptor binding domains.
    J Virol. 2010 Jun;84(11):5836-41.
 
-1. Voss NR, Lyumkis D, Cheng A, Lau PW, et al., Yoshioka C, Carragher B, Potter CS.
+1. Voss NR, Lyumkis D, Cheng A, Lau PW, Mulder A, Lander GC, Brignole EJ, Fellmann D, Irving C, Jacovetty EL, Leung A, Pulokas J, Quispe JD, Winkler H, Yoshioka C, Carragher B, Potter CS.
    A toolbox for ab initio 3D reconstructions in single-particle electron microscopy.
    J Struct Biol. 2010 Mar;169(3):389-98.
 
@@ -74,7 +74,7 @@ based on ANSI/NISO Z39.29-2005 (R2010), Bibliographic References.
    Software tools for molecular microscopy: an open-text Wikibook.
    Methods Enzymol. 2010;482:381-92.
 
-1. Lyumkis D, Moeller A, Cheng A, Herold A, et al., Quispe JD, Voss NR, Potter CS, Carragher B.
+1. Lyumkis D, Moeller A, Cheng A, Herold A, Hou E, Irving C, Jacovetty EL, Lau PW, Mulder AM, Pulokas J, Quispe JD, Voss NR, Potter CS, Carragher B.
    Automation in single-particle electron microscopy: connecting the pieces.
    Methods Enzymol. 2010;483:291-338. doi: 10.1016/S0076-6879(10)83015-0.
 
@@ -82,7 +82,7 @@ based on ANSI/NISO Z39.29-2005 (R2010), Bibliographic References.
    DoG Picker and TiltPicker: tools to facilitate particle selection in single particle electron microscopy.
    J Struct Biol. 2009;166(2):205-13.
 
-1. Lander GC, Stagg SM, Voss NR, Cheng A, et al., Potter CS, Carragher B.
+1. Lander GC, Stagg SM, Voss NR, Cheng A, Fellmann D, Pulokas J, Yoshioka C, Irving C, Mulder A, Lau PW, Lyumkis D, Potter CS, Carragher B.
    Appion: an integrated, database-driven pipeline to facilitate EM image processing.
    J Struct Biol. 2009;166(1):95-102.
 
@@ -110,6 +110,6 @@ based on ANSI/NISO Z39.29-2005 (R2010), Bibliographic References.
    Database of non-canonical base pairs found in known RNA structures.
    Nucleic Acids Res. 2000;28(1):375-376.
 
-1. Junge KE, Voss NR, Lange R, Dolan JM, Zollner S, et al., Kolodzey J.
+1. Junge KE, Voss NR, Lange R, Dolan JM, Zollner S, Dashiell M, Hits DA, Orner BA, Jonczyk R, Kolodzey J.
    Optical properties and band structure of Ge(1-y)C(y) and Ge-rich Si(1-x-y)Ge(x)C(y) alloys.
    Thin Solid Films. 1998;313:172-176.

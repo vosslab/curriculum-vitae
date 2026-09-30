@@ -187,14 +187,18 @@ def reference_document(path):
 	for name in ("Normal", "Body Text", "First Paragraph", "Compact"):
 		style = doc.styles[name] if name in doc.styles else doc.styles.add_style(name, WD_STYLE_TYPE.PARAGRAPH)
 		set_font(style)
-		style.paragraph_format.line_spacing = 1.1
-		style.paragraph_format.space_after = Pt(3 if name == "Compact" else 5)
+		style.paragraph_format.line_spacing = 1.18
+		style.paragraph_format.space_after = Pt(3 if name == "Compact" else 6)
+		if name in {"Body Text", "First Paragraph"}:
+			style.paragraph_format.alignment = WD_ALIGN_PARAGRAPH.JUSTIFY
+			style.paragraph_format.left_indent = Inches(0.15)
 		style.paragraph_format.widow_control = True
 	for number, size in [(1, 14), (2, 12), (3, 11)]:
 		style = doc.styles[f"Heading {number}"]
 		set_font(style, size=size, bold=True)
-		style.paragraph_format.space_before = Pt(10 if number == 1 else 6)
-		style.paragraph_format.space_after = Pt(3)
+		style.paragraph_format.space_before = Pt({1: 20, 2: 14, 3: 10}[number])
+		style.paragraph_format.space_after = Pt(3 if number == 1 else 2)
+		style.paragraph_format.left_indent = Inches(0.15 * (number - 1))
 		style.paragraph_format.keep_with_next = True
 		if number == 1:
 			border = OxmlElement("w:pBdr")
@@ -239,10 +243,22 @@ def finish_docx(path):
 					del font.attrib[attribute]
 				font.set(qn("w:ascii"), MAIN_FONT)
 				font.set(qn("w:hAnsi"), MAIN_FONT)
+	numbering = doc.part.numbering_part.element
+	decimal_ids = set()
+	for num in numbering.xpath("./w:num"):
+		abstract_id = num.find(qn("w:abstractNumId")).get(qn("w:val"))
+		for abstract in numbering.xpath("./w:abstractNum"):
+			if abstract.get(qn("w:abstractNumId")) == abstract_id:
+				if any(fmt.get(qn("w:val")) == "decimal" for fmt in abstract.iter(qn("w:numFmt"))):
+					decimal_ids.add(num.get(qn("w:numId")))
 	for paragraph in doc.paragraphs:
 		if paragraph._p.xpath("./w:pPr/w:numPr"):
+			num_ids = paragraph._p.xpath("./w:pPr/w:numPr/w:numId/@w:val")
 			paragraph.paragraph_format.space_before = Pt(0)
-			paragraph.paragraph_format.space_after = Pt(2)
+			paragraph.paragraph_format.space_after = Pt(7 if any(n in decimal_ids for n in num_ids) else 2)
+			paragraph.paragraph_format.alignment = WD_ALIGN_PARAGRAPH.LEFT
+			paragraph.paragraph_format.left_indent = Inches(0.48)
+			paragraph.paragraph_format.first_line_indent = Inches(-0.25)
 			paragraph.paragraph_format.keep_together = True
 		elif paragraph.style.name in {"Body Text", "First Paragraph"}:
 			paragraph.paragraph_format.keep_together = True

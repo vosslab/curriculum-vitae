@@ -116,6 +116,7 @@ bundled fonts and their license notices; original exports and QA files are exclu
 
 ## Maintenance notes
 
+- [docs/CITATION_STYLE.md](docs/CITATION_STYLE.md): NLM format, byline sources, and remaining metadata gaps.
 - [docs/VALIDATION.md](docs/VALIDATION.md): local validation evidence and compatibility limits.
 - [docs/DESIGN_DECISIONS.md](docs/DESIGN_DECISIONS.md): source and publishing decisions.
 - [docs/HUMAN_GUIDANCE.md](docs/HUMAN_GUIDANCE.md): author instructions and future software updates.
