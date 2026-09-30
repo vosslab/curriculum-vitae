@@ -2,6 +2,16 @@
 
 ### CV publishing
 
+- Fixed the Pages validation blocker by replacing a link to the absent tools guide with
+  optional-directory guidance. Kept the handbook source reference in prose and recorded the
+  author's instruction not to link into the raw source archive.
+
+- Matched RTP capitalization and Peer Committee terminology to the supplied April 18, 2025
+  faculty handbook, pages 33-34.
+
+- Changed departmental peer-review service to 2016-present, with reviews conducted as needed,
+  following the author's clarification that missing records do not indicate breaks in service.
+
 - Recounted the faculty teaching history as 20 distinct course preparations, counting lectures
   and labs separately; replaced the stale total of 17 and clarified the counting convention.
 

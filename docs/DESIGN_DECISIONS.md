@@ -333,6 +333,12 @@ volume path was unavailable. Evidence includes:
 - Departmental peer-review letters identify membership in 2016, 2017, 2018, 2020, and 2025.
   The February 2025 self-evaluation also confirms peer-committee service during the 2024 review
   period. Several letters identify him as chair, but this update focuses on membership.
+  The author subsequently clarified that this is an ongoing responsibility and that records
+  were not saved every year. Use 2016-present, starting with the earliest documented membership,
+  and note that reviews are conducted as needed; archival gaps are not service gaps.
+  The author-supplied April 18, 2025 faculty handbook, pages 33-34, uses Reappointment,
+  Tenure, and Promotion (RTP) and Peer Committee. Use those terms in the CV. The reference is
+  the supplied Handbook of the University Faculty, preserved in the raw source archive.
 - Council minutes submitted by Neil cover 2021 and 2022. The October 12, 2023 representatives
   roster explicitly records his Fall 2023 co-secretary election alongside Mary Hornick.
   April 2024 election materials and the February 2025 self-evaluation confirm later secretary

@@ -100,3 +100,7 @@ origin belongs there too. Rules: [REPO_STYLE.md](REPO_STYLE.md).
   university has moved to centralized advisors.
 - I had course buy-outs in Spring 2025 and Spring 2026. I taught BIOL 383/483-10/24,
   Special Topics: Biology and Ethics in Film (remote), again in Summer 2026.
+- Departmental peer-review committee service is ongoing, with reviews when someone is up for
+  reappointment. Missing documents in a given year do not indicate a gap in service.
+- Use the author-supplied faculty handbook revised April 18, 2025 as a terminology reference.
+- Do not link to files in `raw/`. Identify source material in prose when needed.

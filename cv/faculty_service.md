@@ -65,10 +65,10 @@ Academic advising concluded after 2025/2026 with the university transition to ce
 - Member, Senate Executive Committee (2023-2024)
 - Member, College of Science, Health, and Pharmacy Executive Committee (2022-2024)
 - Member, Research and Professional Leave Committee (2023-2025)
-- Member, College of Arts and Sciences Executive Committee, including reappointment,
-  tenure, and promotion review (2019, 2021)
-- Member, Departmental Peer Review Committees for reappointment, tenure, and promotion
-  (2016-2018, 2020, 2024-2025)
+- Member, College of Arts and Sciences Executive Committee, including Reappointment,
+  Tenure, and Promotion (RTP) review (2019, 2021)
+- Member, Departmental Peer Committees for Reappointment, Tenure, and Promotion (RTP)
+  (2016 - present; reviews conducted as needed)
 - University Senator (2022 - 2024)
 - Schaumburg Natural Science Club, lead faculty advisor, (2016 - 2020)
 - Illinois Articulation Initiative (IAI) Major Biology, Representative, (2012 - *present*)

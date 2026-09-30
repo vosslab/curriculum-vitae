@@ -17,7 +17,7 @@ Use this folder for repository lifecycle and engineering work:
 ## Placement classifier
 
 - Use `devel/` for maintainer and repository-engineering commands.
-- Use [tools/TOOLS_README.md](../tools/TOOLS_README.md) for optional standalone user utilities
+- Use an optional `tools/` directory for standalone user utilities
   whose domain input produces a useful domain result.
 - Use the application CLI or package for primary workflows and reusable application behavior.
 - Use an optional local `launchers/` directory for thin compatibility or convenience delegates
