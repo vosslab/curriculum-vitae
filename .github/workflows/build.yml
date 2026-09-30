@@ -1,0 +1,39 @@
+name: Build CV
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  documents:
+    runs-on: ubuntu-26.04
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          cache: pip
+          cache-dependency-path: 'pip_requirements*.txt'
+      - name: Install document tools
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y pandoc libpango-1.0-0 libpangoft2-1.0-0
+          python3 -m pip install -r pip_requirements.txt -r pip_requirements-dev.txt
+      - name: Check sources and conversion
+        shell: bash
+        run: source source_me.sh && python3 -m pytest tests/ --no-ascii-fix
+      - name: Build documents
+        shell: bash
+        run: source source_me.sh && python3 build_cv.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: neil-voss-cv
+          path: |
+            output/pdf/neil_voss_cv.pdf
+            output/neil_voss_cv.docx
+            output/CV.md
+          if-no-files-found: error
