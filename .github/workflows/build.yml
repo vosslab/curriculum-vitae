@@ -12,8 +12,8 @@ jobs:
   documents:
     runs-on: ubuntu-26.04
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-python@v5
+      - uses: actions/checkout@v7
+      - uses: actions/setup-python@v7
         with:
           python-version: '3.12'
           cache: pip
@@ -29,7 +29,7 @@ jobs:
       - name: Build documents
         shell: bash
         run: source source_me.sh && python3 build_cv.py
-      - uses: actions/upload-artifact@v4
+      - uses: actions/upload-artifact@v7
         with:
           name: neil-voss-cv
           path: |
@@ -37,3 +37,27 @@ jobs:
             output/neil_voss_cv.docx
             output/CV.md
           if-no-files-found: error
+      - name: Upload Pages site
+        if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
+        uses: actions/upload-pages-artifact@v5
+        with:
+          path: output/site
+
+  deploy:
+    needs: documents
+    if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
+    runs-on: ubuntu-26.04
+    # ASVS 8.2.1: only the main-branch deployment receives publication permissions.
+    permissions:
+      pages: write
+      id-token: write
+    concurrency:
+      group: github-pages
+      cancel-in-progress: true
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/configure-pages@v6
+      - id: deployment
+        uses: actions/deploy-pages@v5
