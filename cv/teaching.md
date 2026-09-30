@@ -2,11 +2,20 @@
 
 Teaching load: 2010-2016: six courses per year; Spring 2017-Spring 2021: seven courses per year; nine contact hours per week. 17 different courses. &dagger; - denotes new course preparation for that semester.
 
+### Curriculum Development
+
+- Designed the M.S. Bioinformatics curriculum and secured program approval (2024-2025).
+- Committee lead, BIOL 201-202 curriculum realignment (Fall 2023 - Fall 2025).
+
 ### Fall 2026
 
 - BIOL 480-01/480-20, Applications of Biotechnology (remote/hybrid)
 - BIOL 351/451-20, Genetics Lecture (face-to-face)
 - BIOL 318/418-10, Biostatistics Lecture (hybrid)
+
+### Summer 2026
+
+- BIOL 383/483, Special Topics: Biology and Ethics in Film (remote)
 
 ### Spring 2026
 

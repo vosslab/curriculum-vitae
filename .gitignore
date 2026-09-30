@@ -17,3 +17,4 @@ _temp*.?*
 # Propagation preserves this section.
 # Template-only ignores.
 /raw/
+/aella-llm-wiki/

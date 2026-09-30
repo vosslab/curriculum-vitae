@@ -67,3 +67,19 @@ origin belongs there too. Rules: [REPO_STYLE.md](REPO_STYLE.md).
   ready-to-use material for educators, using the author's supplied wording.
 - Always include `--norestore` when invoking `soffice`, including headless DOCX rendering.
   The installed LibreOffice CLI confirms this spelling; it disables crash recovery.
+- Add supported missing CV entries from the service records and our discussion, including
+  curriculum development, committee work, LibreTexts contributions, and the student podcast.
+- I led the BIOL 201-202 realignment committee, probably Fall 2023 through November 2025.
+  November is inferred from the last file edit; use Fall 2025 without claiming an exact end date.
+- I think the Roosevelt AI Working Group dissolved in Spring 2026; the end date is recalled,
+  rather than independently verified.
+- I attended OpenEd 2025 in person for networking and did not formally present.
+- I run a podcast with students, with 34 episodes as of September 30, 2026.
+- I had unofficial summer research students. Names, year, levels, and projects still need
+  confirmation before adding individual supervision entries.
+- I chaired the tenure-track Microbiology and Immunology search in Fall 2024/Spring 2025
+  and the tenure-track Biochemistry search in Fall 2025/Spring 2026; both were successful hires.
+- I have three or four OER books; I supplied the LibreTexts links for Advanced Genetics,
+  the ADAPT WeBWorK Handbook, and the BCHM 355/455 Biochemistry book.
+- Use year ranges without semesters for faculty search committee dates.
+- I was elected Vice Chair of the CSHP College Council in September 2026.

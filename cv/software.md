@@ -4,6 +4,11 @@ GitHub account: <https://github.com/vosslab>
 
 ### Primary/Sole Maintainer
 
+1. **Peptidyle Learning Engine (in development)**
+   Open-source teaching platform for repeatable, automatically graded practice, shared question
+   libraries, and algorithmic WeBWorK assessments.
+   <https://github.com/vosslab/peptidyle-learning-engine>
+
 1. **Biology Problems (2025)**
    Free, open biology problem sets that help students practice and give educators ready-to-use questions for courses, homework, quizzes, and learning-management systems.
    *https://biologyproblems.org/*

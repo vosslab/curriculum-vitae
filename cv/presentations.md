@@ -1,5 +1,15 @@
 ## Posters and Presentations
 
+1. NR Voss (**Panel participant; virtual presentation**)
+   The Future is Now: LibreTexts and AI
+   LibreTexts, Open Education Week, March 6, 2026
+   <https://www.youtube.com/watch?v=LRsjYezafUo>
+
+1. NR Voss (**Virtual presentation**)
+   ADAPT and AI: An Instructor's Success Story
+   LibreTexts, Open Education Week, March 4, 2026
+   <https://libretexts.org/blog/opened-week-2026-right-around-corner>
+
 1. NR Voss (**Presentation**)
    May 19-20, 2025, Lincoln Legacy Teaching and Learning Community, Urbana, IL
    <https://lincolnlegacytlc.web.illinois.edu/index.html>

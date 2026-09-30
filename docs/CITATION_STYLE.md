@@ -44,6 +44,12 @@ available identifiers; the supplied in-preparation manuscript has its own unpubl
 
 ## Items for author review
 
+- The OER list contains three distinct LibreTexts books supplied by the author. Genetics and
+  biochemistry use the displayed titles, rather than assuming URL slugs are current titles.
+  Their cover-page attribution credits Neil Voss for authorship, remixing, and/or curation;
+  individual chapters retain other authors. The CV identifies the compilation role as remix
+  and curation. Original publication years are not established by last-updated timestamps and
+  are omitted pending confirmation. A possible fourth book has not been identified.
 - The 2019 Fouch manuscript remains marked in preparation; it is not relabeled as published.
 - The count is 23 distinct peer-reviewed works, including book chapters; profile citation metrics
   use the supplied September 30, 2026 WoS snapshot.

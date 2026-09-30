@@ -2,6 +2,28 @@
 
 ### CV publishing
 
+- Added the author-confirmed election as CSHP College Council Vice Chair in September 2026.
+
+- Used the supplied Aella wiki to expand the podcast entry with its 2026 start, hosting role,
+  student challenges, and live educational-software development; added the missing Summer 2026
+  Biology and Ethics in Film course. Kept episode prototypes out of the software list.
+
+- Simplified the two chaired tenure-track search dates to 2024-2025 and 2025-2026,
+  omitting semesters at the author's request.
+
+- Added the author-supplied genetics and biochemistry LibreTexts books to the OER list,
+  using their displayed titles and identifying remix/curation contributions. The handbook
+  remains a single entry; original publication years and a possible fourth book remain unresolved.
+
+- Confirmed both chaired tenure-track searches as successful hires: Microbiology and Immunology
+  (Fall 2024-Spring 2025) and Biochemistry (Fall 2025-Spring 2026), replacing the latter's
+  outdated in-progress status.
+
+- Added supported committee service, curriculum development and realignment leadership,
+  LibreTexts AI initiative work, two March 2026 presentations, the ADAPT WeBWorK Handbook,
+  Peptidyle (in development), and the student podcast. Recorded evidence and unresolved dates;
+  retained OpenEd 2025 as attendance only and deferred unconfirmed student-supervision entries.
+
 - Recorded the requirement to include `--norestore` in all `soffice` invocations, verified
   against the installed command's help.
 

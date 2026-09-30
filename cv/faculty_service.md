@@ -20,9 +20,9 @@
 
 ### Faculty Search Committees
 
-- Chair, TT Professor of Biochemistry Search Committee (2025-2026), in progress
+- Chair, Tenure-Track Professor of Biochemistry Search Committee (2025-2026), successful hire
 - Member, Visiting Professor of Biochemistry Search Committee (2025), successful hire
-- Chair, TT Professor of Microbiology/Immunology Search Committee (2024-2025), successful hire
+- Chair, Tenure-Track Professor of Microbiology and Immunology Search Committee (2024-2025), successful hire
 - Member, NTT Professor of Chemistry Search Committee (2024-2025), successful hire
 - Member, NTT Professor of Physical Science Search Committee (2022-2023), cancelled
 - Member, NTT Professor of Biochemistry Search Committee (2017), cancelled
@@ -54,6 +54,14 @@
 
 ### Committee and Event Service
 
+- Vice Chair, College of Science, Health, and Pharmacy Council (September 2026 - present)
+- Member, LibreTexts AI Initiative, leading AI-assisted homework adaptation and testing for ADAPT (2026)
+- Member, Roosevelt University AI Working Group (2025-2026; concluded Spring 2026)
+- Member, Teaching Modalities Task Force (Spring 2025)
+- Secretary, College of Science, Health, and Pharmacy Council (2024-2025)
+- Member, Senate Executive Committee (2024)
+- Member, College Executive Committee (2024)
+- Elected to the Research and Professional Leave Committee (April 2024)
 - University Senator (Fall 2022 - August 2024)
 - Schaumburg Natural Science Club, lead faculty advisor, (Fall 2016 - Spring 2020)
 - Illinois Articulation Initiative (IAI) Major Biology, Representative, (Fall 2012 - *present*)
@@ -76,6 +84,10 @@
 
 ### Other service
 
+- Host and organizer, *Stump the Vibe Coder* (2026 - present), a live podcast and coding series
+  with students. Develop and test educational games, scientific simulations, and software from
+  student-generated challenges using AI coding assistants; 34 episodes as of September 2026.
+  <https://www.youtube.com/playlist?list=PL5LJPD9b2pRYsw2sU3LRCDhvDSiZ26E48>
 - Department Website Developer (Fall 2010 - present)
 - Fact Sheet (B.S., Biochemistry)
 

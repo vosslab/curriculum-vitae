@@ -101,6 +101,23 @@ based on ANSI/NISO Z39.29-2005 (R2010), Bibliographic References.
    Optical properties and band structure of Ge(1-y)C(y) and Ge-rich Si(1-x-y)Ge(x)C(y) alloys.
    Thin Solid Films. 1998 Feb;313-314:172-6. doi: 10.1016/s0040-6090(97)00806-7.
 
+### Open Educational Resources
+
+1. Voss NR (remix and curation).
+   Advanced Genetics: Mechanisms of Inheritance and Analysis.
+   LibreTexts, Roosevelt University. Open genetics textbook.
+   <https://bio.libretexts.org/Courses/Roosevelt_University/Advanced_Genetics%3A_Mechanisms_of_Inheritance_and_Analysis>
+
+1. Voss NR (remix and curation).
+   Upper-Level Introductory Biochemistry.
+   LibreTexts, Roosevelt University. Open textbook for BCHM 355/455.
+   <https://bio.libretexts.org/Courses/Roosevelt_University/BCHM_355_455_Biochemistry_(Roosevelt_University)>
+
+1. Voss NR.
+   The ADAPT WeBWorK Handbook.
+   LibreTexts; 2026. Open guide to creating, testing, and publishing WeBWorK problems in ADAPT.
+   <https://chem.libretexts.org/Courses/Remixer_University/The_ADAPT_WeBWorK_Handbook>
+
 ### Unpublished Manuscript
 
 1. Fouch K, Piotrowski A, Sharma V, Voss NR.

@@ -219,3 +219,59 @@ teaching, research, publications, and service. Keep technical instructions in
 academic visitors do not need to install software to read the CV.
 
 **Owner.** [../README.md](../README.md) and [MAINTENANCE.md](MAINTENANCE.md).
+
+### Evidence-backed CV additions
+
+**Decision.** Add documented service, curriculum, OER, software, and presentation entries;
+use only supported years and role descriptions. The handbook has its own OER subsection and
+does not change the count of 23 peer-reviewed works. Peptidyle is explicitly in development.
+
+**Why.** The author authorized the additions after a read-only survey of the SERVICE archive.
+The February 26, 2025 self-evaluation supports program design/approval, the AI Working Group,
+College Council secretary, and Senate/College Executive Committee service. The February 14,
+2025 task-force agenda names the author; April 18, 2024 council minutes record the secretary
+continuation and Research and Professional Leave Committee election.
+
+LibreTexts' [2026 event schedule](https://libretexts.org/blog/opened-week-2026-right-around-corner)
+dates the ADAPT talk to March 4 and the AI discussion to March 6. The author-supplied subtitle
+file for video LRsjYezafUo identifies Voss as an AI initiative participant at 14:26-14:55 and
+as taking the ADAPT effort's lead at 38:03-38:11. These are responsibilities, not an invented
+director title. The [handbook](https://chem.libretexts.org/Courses/Remixer_University/The_ADAPT_WeBWorK_Handbook)
+credits Neil R. Voss; its AI disclaimer dates its creation to February 2026. Public playlist
+metadata identifies *Stump the Vibe Coder* and episode 34; the author supplies the student
+involvement and episode count. Peptidyle's current local README describes pre-production status.
+
+**Consequence.** Committee years show documented service, not necessarily complete tenure.
+The AI Working Group's Spring 2026 conclusion and realignment committee's Fall 2025 end are
+author recollections. Full secretary and executive-committee terms remain unresolved: the
+self-evaluation's September 2024 end conflicts with the college committee election record.
+The existing March 5, 2025 presentation remains separate from the verified 2026 events.
+OpenEd 2025 attendance is not a presentation. Unnamed summer students and Tania Guarneros
+Martinez remain pending; the latter's research document does not establish supervision.
+Pierre Suessmuth is documented as an OER student worker, but the classification and dates of
+supervision need confirmation before adding him to the research roster. No formal program
+director appointment or completed realignment outcome is inferred.
+
+**Owner.** [../cv/faculty_service.md](../cv/faculty_service.md),
+[../cv/teaching.md](../cv/teaching.md), [../cv/presentations.md](../cv/presentations.md),
+[../cv/publications.md](../cv/publications.md), and [../cv/software.md](../cv/software.md).
+
+### Wiki-supported teaching and outreach
+
+**Decision.** Use the supplied Aella wiki's podcast overview and episode summaries to describe
+the live student-challenge format and 2026 start. Add the Summer 2026 film course recorded in
+its course overview and history. Retain the author's more recent count of 34 podcast episodes.
+
+**Why.** The supplied, untracked wiki pages are titled "Stump the Vibe Coder,"
+"BIOL 383/483 - Biology and Ethics in Film," and "BIOL 383/483 Film History and Selection
+Inventory." They are local source material rather than published repository documentation.
+These summaries identify underlying recordings and course documents; their raw
+transcripts and Google Drive sources were not independently reread for this update.
+
+**Consequence.** Treat the wiki as supporting evidence, not a current release inventory.
+Individual games and simulations require project-specific review before separate software
+entries. The wiki's older episode coverage does not replace the author's count. Student
+participation in a stream does not establish an individual research-supervision entry.
+
+**Owner.** [../cv/faculty_service.md](../cv/faculty_service.md) and
+[../cv/teaching.md](../cv/teaching.md).
