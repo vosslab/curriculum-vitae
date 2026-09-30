@@ -8,9 +8,33 @@ on:
 permissions:
   contents: read
 
+# Serialize each branch's complete run so an older slow build cannot deploy last.
+concurrency:
+  group: cv-${{ github.workflow }}-${{ github.event_name }}-${{ github.ref }}
+  cancel-in-progress: false
+
 jobs:
+  repository_checks:
+    name: Repository documentation checks
+    runs-on: ubuntu-26.04
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.12'
+      - name: Install check dependencies
+        run: python3 -m pip install --retries 5 --timeout 30 -r pip_requirements-dev.txt
+      # Keep failures visible without blocking a valid CV over unrelated maintainer docs.
+      - name: Check non-CV documentation
+        shell: bash
+        run: |
+          source source_me.sh
+          python3 -m pytest tests/test_ascii_compliance.py tests/test_markdown_links.py tests/test_whitespace.py -k 'not cv/' --no-ascii-fix
+
   documents:
     runs-on: ubuntu-26.04
+    timeout-minutes: 20
     steps:
       - uses: actions/checkout@v7
       - uses: actions/setup-python@v7
@@ -20,16 +44,18 @@ jobs:
           cache-dependency-path: 'pip_requirements*.txt'
       - name: Install document tools
         run: |
-          sudo apt-get update
-          sudo apt-get install -y pandoc libpango-1.0-0 libpangoft2-1.0-0
-          python3 -m pip install -r pip_requirements.txt -r pip_requirements-dev.txt
-      - name: Check sources and conversion
+          sudo apt-get -o Acquire::Retries=3 update
+          sudo apt-get -o Acquire::Retries=3 install -y pandoc libpango-1.0-0 libpangoft2-1.0-0 libharfbuzz-subset0
+          python3 -m pip install --retries 5 --timeout 30 -r pip_requirements.txt -r pip_requirements-dev.txt
+      - name: Check CV sources and conversion
         shell: bash
-        run: source source_me.sh && python3 -m pytest tests/ --no-ascii-fix
+        run: source source_me.sh && python3 -m pytest tests/ -k 'cv/ or test_cv_build' --no-ascii-fix
       - name: Build documents
         shell: bash
         run: source source_me.sh && python3 build_cv.py
       - uses: actions/upload-artifact@v7
+        # Downloadable CI artifacts are optional; the separate Pages artifact is required.
+        continue-on-error: true
         with:
           name: neil-voss-cv
           path: |
@@ -47,13 +73,14 @@ jobs:
     needs: documents
     if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
     runs-on: ubuntu-26.04
+    timeout-minutes: 10
     # ASVS 8.2.1: only the main-branch deployment receives publication permissions.
     permissions:
       pages: write
       id-token: write
     concurrency:
       group: github-pages
-      cancel-in-progress: true
+      cancel-in-progress: false
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
