@@ -71,6 +71,7 @@ li p { margin: 0; text-align: left; }
 a { color: var(--cv-link-color); text-decoration: underline; overflow-wrap: anywhere; }
 code, pre { font-family: "Atkinson Hyperlegible Mono", monospace; }
 .cv-url { font-family: "IBM Plex Sans Condensed", sans-serif; font-variant-numeric: slashed-zero; }
+.profile-icon { width: 1em; height: 1em; fill: #000; vertical-align: -0.12em; }
 .citation-details { font-size: 10pt; }
 .citation-details a { white-space: nowrap; }
 .student-list { break-inside: avoid; }

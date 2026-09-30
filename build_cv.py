@@ -102,8 +102,8 @@ def student_lists(document):
 			if level <= 2:
 				in_supervision = level == 2 and text.casefold() == "research supervision"
 				in_year = False
-			elif level == 3:
-				in_year = bool(re.match(r"^\d{4}:", text))
+			elif level in {3, 4}:
+				in_year = bool(re.match(r"^\d{4}(?::|$)", text))
 		if in_supervision and in_year and block["t"] == "BulletList":
 			if len(block["c"]) > 1:
 				selected.add(index)
@@ -207,6 +207,44 @@ def publication_details(node, output_format):
 	return {key: publication_details(value, output_format) for key, value in node.items()}
 
 
+def profile_icons(node, output_format):
+	"""Decorate selected profile labels without replacing accessible text."""
+	if isinstance(node, list):
+		return [profile_icons(item, output_format) for item in node]
+	if not isinstance(node, dict):
+		return node
+	result = {key: profile_icons(value, output_format) for key, value in node.items()}
+	if result.get("t") not in {"Para", "Plain"}:
+		return result
+	labels = {
+		"GitHub account:": "github", "Github:": "github", "GitHub:": "github",
+		"ORCID:": "orcid", "YouTube:": "youtube", "Bluesky:": "bluesky",
+		"Facebook:": "facebook", "LinkedIn:": "linkedin",
+	}
+	text = inline_text(result["c"])
+	name = next((icon for label, icon in labels.items() if text.startswith(label)), None)
+	position = 0
+	if name is None:
+		for index, item in enumerate(result["c"]):
+			if (item.get("t") == "Link" and item["c"][2][0]
+				== "https://www.youtube.com/playlist?list=PL5LJPD9b2pRYsw2sU3LRCDhvDSiZ26E48"):
+				name, position = "youtube", index
+				break
+	if name is None:
+		return result
+	# ASVS 5.3.2: filenames come only from the fixed icon mapping above.
+	path = ROOT / "assets/icons" / name
+	if output_format == "html":
+		svg = path.with_suffix(".svg").read_text().replace(
+			'<svg ', '<svg class="profile-icon" aria-hidden="true" focusable="false" ', 1)
+		icon = {"t": "RawInline", "c": ["html", svg]}
+	else:
+		icon = {"t": "Image", "c": [
+			["", [], [["height", "0.14in"]]], [], [str(path.with_suffix(".png")), ""]]}
+	result["c"][position:position] = [icon, {"t": "Space"}]
+	return result
+
+
 def export_document(document, output_format):
 	"""Add output presentation without changing the source content or order."""
 	result = copy.deepcopy(document)
@@ -215,7 +253,7 @@ def export_document(document, output_format):
 	in_citations = False
 	in_publications = False
 	for index, original in enumerate(result["blocks"]):
-		block = format_links(original, output_format)
+		block = profile_icons(format_links(original, output_format), output_format)
 		if block["t"] == "Header" and block["c"][0] <= 2:
 			in_publications = inline_text(block["c"][2]).casefold() == "publications"
 			in_citations = inline_text(block["c"][2]).casefold() in {
@@ -392,6 +430,10 @@ def finish_docx(path):
 	doc.core_properties.title = "Neil R. Voss - Curriculum Vitae"
 	doc.core_properties.author = "Neil R. Voss"
 	doc.core_properties.language = "en-US"
+	doc.core_properties.comments = (
+		"Brand icons: Font Awesome Free 6.7.2 by Fonticons, Inc. "
+		"https://fontawesome.com - CC BY 4.0 https://creativecommons.org/licenses/by/4.0/ "
+		"Rendered in black as PNG equivalents of the SVG originals.")
 	doc.save(path)
 	embed_fonts(path)
 

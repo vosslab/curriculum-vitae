@@ -482,3 +482,34 @@ Teaching Assistantships Prior to Faculty Appointment.
 generated formats. Semester headings use the explicitly requested level below H2.
 
 **Owner.** Author.
+
+### Black profile icons
+
+**Decision.** Add small black Font Awesome Free 6.7.2 brand icons beside the GitHub account,
+ORCID, social media labels, and podcast playlist. Retain readable labels and full URLs.
+
+**Why.** The author requested black icons after discussing restrained profile-link decoration.
+
+**Consequence.** Bundle SVGs for inline HTML/PDF and PNG equivalents for Word. No icon font,
+script, or network fetch is needed at build or viewing time. Fixed icon names preserve the
+local asset boundary (ASVS 5.3.2). SVG comments, asset documentation, and Word metadata retain
+attribution. See [../assets/icons/README.md](../assets/icons/README.md).
+
+**Owner.** Author color preference; repository maintainer implementation.
+
+### Separate thesis and annual research supervision
+
+**Decision.** Retain the thesis roster with date ranges under H3, followed by an H3 Research
+Students by Year subsection with H4 years. Remove the known thesis roster names from annual
+lists, including Gregory/Greg Gillespie.
+
+**Why.** The author requested clearer separation and confirmed four additional students.
+
+**Consequence.** Omit years containing only thesis students and remove the obsolete new/continued
+counts. Tania Guarneros Martinez is added for Summer 2023 from her research document and the
+author's confirmation; Olivia Reed, Meet Gulabani, and Gary Nunez are added for Summer 2026.
+The author confirms Gary, Tania, and Olivia as master's students and Meet as an undergraduate;
+master's enrollment alone does not establish thesis supervision. This resolves the earlier pending Tania
+and unnamed summer-student entries. Annual lists retain two-column rendering.
+
+**Owner.** Author confirmation and organization request.

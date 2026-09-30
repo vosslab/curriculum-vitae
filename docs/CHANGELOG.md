@@ -2,6 +2,14 @@
 
 ### CV publishing
 
+- Separated thesis supervision from annual research students, made year headings H4, and
+  added Tania Guarneros Martinez (Summer 2023), Olivia Reed, Meet Gulabani, and Gary Nunez
+  (Summer 2026). Recorded confirmed degree levels, including Amber and Armela as undergraduates.
+  Preserved two-column annual lists with the new heading hierarchy.
+
+- Added bundled black Font Awesome icons beside profile and social labels and the podcast
+  link, retaining readable text in HTML, PDF, and Word.
+
 - Removed the year from the Biology Problems heading to match the other software titles.
 
 - Updated the 3V website link to the author-supplied VossVolvox Pages address.

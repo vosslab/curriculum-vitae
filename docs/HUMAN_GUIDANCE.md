@@ -118,3 +118,10 @@ origin belongs there too. Rules: [REPO_STYLE.md](REPO_STYLE.md).
 - The current 3V website is <https://vosslab.github.io/vossvolvox-pages/>.
 - Omit the year from the Biology Problems software heading, consistent with the other
   software headings.
+- Keep Font Awesome profile and social media icons black.
+- Make Research Supervision year headings H4 and separate thesis students from general
+  research. Add Tania Guarneros Martinez and Summer 2026 students Olivia Reed, Meet Gulabani,
+  and Gary Nunez; this confirms Tania's supervision.
+- Gary Nunez, Tania Guarneros Martinez, and Olivia Reed are master's students; Meet
+  Gulabani is an undergraduate.
+- Amber Misiowiec and Armela Zeneli are undergraduates.
