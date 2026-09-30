@@ -2,6 +2,8 @@
 
 ### CV publishing
 
+- Added author-confirmed PULSE committee membership; dates remain pending confirmation.
+
 - Fixed the Pages validation blocker by replacing a link to the absent tools guide with
   optional-directory guidance. Kept the handbook source reference in prose and recorded the
   author's instruction not to link into the raw source archive.

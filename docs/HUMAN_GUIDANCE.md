@@ -104,3 +104,4 @@ origin belongs there too. Rules: [REPO_STYLE.md](REPO_STYLE.md).
   reappointment. Missing documents in a given year do not indicate a gap in service.
 - Use the author-supplied faculty handbook revised April 18, 2025 as a terminology reference.
 - Do not link to files in `raw/`. Identify source material in prose when needed.
+- I have been a required member of the PULSE committee.

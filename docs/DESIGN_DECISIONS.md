@@ -391,3 +391,16 @@ The count describes the listed history, not independent verification of its comp
 the teaching-load/contact-hour statement.
 
 **Owner.** [../cv/teaching.md](../cv/teaching.md).
+
+### PULSE committee membership
+
+**Decision.** Add PULSE Committee membership based on the author's confirmation. Omit dates
+until the term is established; describe the role simply as Member.
+
+**Why.** Required service is still committee service. The SERVICE archive contains 2015 PULSE
+materials and the author's September 2022 Pedagogical Practices document, but neither establishes
+the appointment start or whether it remains ongoing.
+
+**Consequence.** Do not infer a 2015 or 2022 start from folder contents or claim a leadership role.
+
+**Owner.** [../cv/faculty_service.md](../cv/faculty_service.md).

@@ -69,6 +69,7 @@ Academic advising concluded after 2025/2026 with the university transition to ce
   Tenure, and Promotion (RTP) review (2019, 2021)
 - Member, Departmental Peer Committees for Reappointment, Tenure, and Promotion (RTP)
   (2016 - present; reviews conducted as needed)
+- Member, PULSE Committee
 - University Senator (2022 - 2024)
 - Schaumburg Natural Science Club, lead faculty advisor, (2016 - 2020)
 - Illinois Articulation Initiative (IAI) Major Biology, Representative, (2012 - *present*)
