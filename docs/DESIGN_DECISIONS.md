@@ -86,7 +86,8 @@ and typographic punctuation normalization.
 **Why.** The author explicitly limited this migration to formatting and factual preservation.
 
 **Consequence.** Future factual corrections happen in the appropriate source section at the
-author's direction. The original "Last Modified" line is historical source text, not a build date.
+author's direction. The original fixed "Last Modified" line has been superseded by the author-requested automatic
+build date described below.
 
 **Owner.** The Markdown files under `cv/`.
 
@@ -106,3 +107,100 @@ citation changes, while factual uncertainties remain visible for author review.
 
 **Owner.** [../styles/cv.css](../styles/cv.css), [../build_cv.py](../build_cv.py), and
 [CITATION_STYLE.md](CITATION_STYLE.md).
+
+### Visible link destinations
+
+**Decision.** Use simple GFM autolinks in CV sources and exact destination text for all exported
+hyperlinks. Keep contextual names beside URLs. Show full public URLs in the site's download links.
+
+**Why.** The author prioritizes inspecting destinations before clicking. This overrides the shared
+Markdown guide's preference for descriptive-only external link text in the CV.
+
+**Consequence.** The converter enforces matching link text and target in HTML, PDF, and DOCX.
+Long URLs retain the condensed font. Existing destinations are preserved, including HTTP schemes;
+visible URLs do not certify the safety of a destination or its redirects.
+
+**Owner.** [../build_cv.py](../build_cv.py) and the Markdown sources under `cv/`.
+
+### Multiline citation layout
+
+**Decision.** Preserve authored source line breaks inside numbered publication and presentation
+entries during conversion; use 12 pt after numbered entries in HTML/PDF and DOCX.
+
+**Why.** The author wants titles and adjacent entries to be easier to distinguish.
+
+**Consequence.** Keep authors, titles, and publication or meeting details on separate source lines.
+The converter turns those newlines into visible line breaks, retaining native list numbering and
+keeping entries together across pages. Other sections retain ordinary Markdown line wrapping.
+NLM citation content and punctuation remain unchanged; this is a CV layout choice.
+
+**Owner.** [../build_cv.py](../build_cv.py) and [../styles/cv.css](../styles/cv.css).
+
+### Clickable citation identifiers
+
+**Decision.** Convert plain `doi:`, `PMID:`, and `PMCID:` fields into links to doi.org,
+pubmed.ncbi.nlm.nih.gov, and pmc.ncbi.nlm.nih.gov respectively, showing the identifier only.
+
+**Why.** The author explicitly exempts these recognizable identifiers from full-URL display.
+
+**Consequence.** GFM stays plain; generated HTML, PDF, and DOCX gain links. Sentence punctuation
+stays outside the link and DOI parentheses remain part of the identifier. Other links still show
+full destinations. Missing or unrecognized identifiers remain untouched.
+
+**Owner.** [../build_cv.py](../build_cv.py).
+
+### Automatic modification date
+
+**Decision.** Append the build date as the final Last Modified paragraph during source assembly
+for distribution. Use America/Chicago consistently in local and GitHub Actions builds.
+
+**Why.** The author requested automatic replacement of the stale August 25, 2023 date.
+
+**Consequence.** Every generated format shares one date, including assembled Markdown and the
+Pages site. Source section files need no manual date edits. This is the build date, not a Git
+commit timestamp; rebuilding on a later day advances it even if CV content has not changed.
+
+**Owner.** [../build_cv.py](../build_cv.py).
+
+### Reconciled bibliography and source conflicts
+
+**Decision.** Incorporate verified bibliographic metadata, merge duplicate works, separate the
+unpublished manuscript, and retain 23 published works. Use PubMed for matched citations and
+publisher metadata for physics-paper discrepancies. Preserve author contribution annotations.
+
+**Why.** The author requested completion of the audited reconciliation, without another approval step.
+
+**Consequence.** The source is more complete while historical metrics remain dated. Conflicting
+personal appointment dates retain the author's CV version; the saved ORCID alternative remains
+in the audit. The 2019 in-preparation statement is preserved without claiming later publication.
+
+**Owner.** [../cv/publications.md](../cv/publications.md), [PUBLICATION_AUDIT.md](PUBLICATION_AUDIT.md),
+and [ORCID_AUDIT.md](ORCID_AUDIT.md).
+
+### Printer-safe footer placement
+
+**Decision.** Keep 0.6-inch top and side margins and place footers at least 0.6 inches above the
+bottom edge. Reserve a 0.25-inch footer band by ending body content 0.85 inches above the bottom.
+
+**Why.** The author's printers require 0.6-inch clearance, including footers. The body and footer
+need separate space to avoid overlap.
+
+**Consequence.** PDF and DOCX use the same printable bounds; pagination may grow slightly.
+
+**Owner.** [../build_cv.py](../build_cv.py) and [../styles/cv.css](../styles/cv.css).
+
+### Dated Web of Science metrics
+
+**Decision.** Use the supplied profile dashboard's 2,961 citations and h-index 17, dated September
+30, 2026. Preserve deduplicated per-paper counts and source gaps in
+[CITATION_METRICS.md](CITATION_METRICS.md), without adding counts to every citation.
+
+**Why.** The dashboard provides aggregate values even though the pasted search batches omit two
+main works. Repeated search results and reference counts must not inflate citation counts.
+
+**Consequence.** Unknown per-paper counts remain unknown. The CV has 23 main works; the dashboard
+has 24 records, with the composition unresolved because the author recalls a possible database
+duplicate in addition to the separately listed correction. The older 2015 metric snapshot
+is retained in the metrics report as history rather than displayed as current.
+
+**Owner.** [../cv/publications.md](../cv/publications.md) and [CITATION_METRICS.md](CITATION_METRICS.md).

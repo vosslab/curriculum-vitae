@@ -38,10 +38,15 @@
 @page {
   size: Letter;
   margin: 0.6in;
+  margin-bottom: 0.85in;
   @bottom-right {
     content: "Neil Voss, curriculum vitae | Page " counter(page) " of " counter(pages);
     font-family: "Atkinson Hyperlegible Next";
     font-size: 8pt;
+    line-height: 1;
+    vertical-align: bottom;
+    /* Allow for font descenders below the line box. */
+    margin-bottom: 0.625in;
   }
 }
 body {
@@ -61,7 +66,7 @@ p { margin: 0 0 6pt 0.15in; orphans: 2; widows: 2; break-inside: avoid; }
 main > p { text-align: justify; }
 ul, ol { padding-left: 24pt; margin: 0 0 6pt 0.15in; }
 li { margin-bottom: 2pt; break-inside: avoid; }
-ol > li { margin-bottom: 7pt; }
+ol > li { margin-bottom: 12pt; }
 li p { margin: 0; text-align: left; }
 a { color: var(--cv-link-color); text-decoration: underline; overflow-wrap: anywhere; }
 code, pre { font-family: "Atkinson Hyperlegible Mono", monospace; }

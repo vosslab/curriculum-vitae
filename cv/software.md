@@ -1,6 +1,6 @@
 ## Software Development and Support
 
-GitHub account: [https://github.com/vosslab](https://github.com/vosslab)
+GitHub account: <https://github.com/vosslab>
 
 ### Primary/Sole Maintainer
 
@@ -10,43 +10,43 @@ GitHub account: [https://github.com/vosslab](https://github.com/vosslab)
 
 1. **libproteingeometry: Library for Protein Geometry**
    Tools for calculating Voronoi volume of atomic structures.
-   [*http://geometry.molmovdb.org*](http://geometry.molmovdb.org/)
+   *<http://geometry.molmovdb.org/>*
 
 1. **3v: Voss Volume Voxelator**
    Programs for the assessment of protein volumes using the rolling probe method.
-   [*http://3vee.molmovdb.org*](http://3vee.molmovdb.org/) *[https://github.com/vosslab/vossvolvox](https://github.com/vosslab/vossvolvox)*
+   *<http://3vee.molmovdb.org/>* *<https://github.com/vosslab/vossvolvox>*
 
 1. **TiltPicker**
    Tool for picking particles from image tilt pairs for random conical tilt (RCT).
-   [*http://emg.nysbc.org/redmine/projects/software/wiki/TiltPicker*](http://emg.nysbc.org/redmine/projects/software/wiki/TiltPicker)
+   *<http://emg.nysbc.org/redmine/projects/software/wiki/TiltPicker>*
 
 1. **DoG picker**
    Particle picker that uses difference of Gaussians (DoG) for picking particles.
-   [*http://emg.nysbc.org/redmine/projects/software/wiki/DoGpicker*](http://emg.nysbc.org/redmine/projects/software/wiki/DoGpicker)
+   *<http://emg.nysbc.org/redmine/projects/software/wiki/DoGpicker>*
 
 1. **FindEM v1.0**
    Original fast local correlation function (FLCF) template particle picker.
-   [*http://emg.nysbc.org/redmine/projects/software/wiki/FindEM*](http://emg.nysbc.org/redmine/projects/software/wiki/FindEM)
+   *<http://emg.nysbc.org/redmine/projects/software/wiki/FindEM>*
 
 1. **CTF Eval**
    Contrast transfer function (CTF) Evaluation software for 3D Electron Microscopy.
-   [*https://github.com/vossman/ctfeval*](https://github.com/vossman/ctfeval)
+   *<https://github.com/vossman/ctfeval>*
 
 1. **ACE2**
    A CTF Estimator (ACE) 2 with robust astigmatism estimation and CTF correction.
-   [*http://emg.nysbc.org/redmine/projects/software/wiki/ACE2*](http://emg.nysbc.org/redmine/projects/software/wiki/ACE2)
+   *<http://emg.nysbc.org/redmine/projects/software/wiki/ACE2>*
 
 ### Team Maintainer
 
 1. **Appion**
    A pipeline for processing and analysis of EM images.
-   [*https://appion.org*](http://appion.org/)
+   *<http://appion.org/>*
 
 1. **Leginon**
    System designed for automated collection of images from a transmission electron microscope.
-   [*https://leginon.org*](http://leginon.org/)
+   *<http://leginon.org/>*
 
 ### Contributor
 
-1. LibreOffice Suite, [https://www.libreoffice.org/](https://www.libreoffice.org/)
-1. Firefox Web Browser, [https://www.mozilla.org/en-US/firefox/](https://www.mozilla.org/en-US/firefox/)
+1. LibreOffice Suite, <https://www.libreoffice.org/>
+1. Firefox Web Browser, <https://www.mozilla.org/en-US/firefox/>

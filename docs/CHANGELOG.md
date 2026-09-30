@@ -2,6 +2,56 @@
 
 ### CV publishing
 
+- Confirmed that the WoS-indexed cryo-EM gateway grant is existing NSF award 1759735;
+  added the NSF-verified PI designation and saved the official award response locally.
+
+- Recorded the author-confirmed 32-73 citation bounds for the two missing per-paper counts
+  and the recalled possible WoS duplicate; kept dashboard metrics explicitly source-reported.
+
+- Updated the CV to the supplied September 30, 2026 WoS profile metrics (2,961 citations,
+  h-index 17); preserved 21 deduplicated per-work counts and documented missing counts,
+  correction-record handling, and the distinction between references and citations.
+
+- Moved PDF/DOCX footers inside the 0.6-inch printable boundary and reserved a separate
+  0.25-inch footer band above it, retaining 0.6-inch top and side margins.
+
+- Completed source reconciliation: merged publication duplicates, added all supplied identifiers,
+  corrected citation details and physics metadata, retained the erratum, separated the unpublished
+  manuscript, and incorporated organizational units. Updated audits to distinguish completed work
+  from unresolved personal-history facts.
+
+- Audited the saved ORCID print view against all CV sections; documented full work coverage,
+  missing DOI fields, additional appointment detail, and conflicting dates without changing CV facts.
+
+- Saved the supplied physics-paper ORCID records locally and in the publication audit; added
+  both DOIs to the CV and documented unresolved initials and volume differences.
+
+- Added the author-supplied ORCID URL to the CV contact information.
+
+- Reconciled the 2001 protein-atom types citation with PMID 11673240, including Voss N and
+  Gerstein M, its DOI, and publication month; resolved both unmatched biomedical records.
+
+- Reconciled the 2000 RNA base-pair database citation with the author-supplied PMID 10592279:
+  indexed author initials, publication date, DOI, PMID, and PMCID.
+
+- Replaced the fixed 2023 Last Modified line with the current America/Chicago build date in
+  every generated format, without rewriting Markdown source files during builds.
+
+- Compared all 19 records in the supplied PubMed dump with the CV; documented duplicates,
+  citation differences, missing identifiers, and unmatched works in the publication audit.
+
+- Automatically linked DOI, PMID, and PMCID fields to canonical destinations in generated
+  documents, retaining compact identifiers and plain Markdown source.
+
+- Preserved authored field lines in publication and presentation exports, putting titles on their
+  own lines; increased spacing between numbered entries from 7 pt to 12 pt in all output formats.
+
+- Added the author-confirmed 2025 year to Lincoln Legacy Teaching and Learning Community;
+  checked that all 27 poster/presentation entries include a year.
+
+- Show exact link destinations throughout CV sources, exports, and site navigation; retain social
+  platform labels beside visible URLs and correct displayed schemes that differed from targets.
+
 - Numbered publications, presentations, and software entries using ordinary GFM lists. Increased
   heading separation, stepped heading indentation, and justified prose in PDF/DOCX and wide HTML.
 - Standardized journal references toward NLM format, added a linked format note, and restored seven

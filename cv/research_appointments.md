@@ -18,12 +18,16 @@
 
 **Assistant Professor of Biology at Roosevelt University** Aug. 2010 - Aug. 2016
 
+Department of Biological, Chemical, and Physical Sciences
+
 **Northwestern University Visiting Scholar** May 2014 - Dec 2015
 
 - Collaboration with Vinzenz Unger, Former Director of the NU Electron Microscopy Core Facility.
 - Implemented Leginon automated data collection on JEOL electron microscopes and Gatan imaging devices.
 
 **Scripps Research Post-doctoral Associate** Dec. 2006 - Aug. 2010
+
+National Resource for Automated Molecular Microscopy
 
 - Advisors, Bridget Carragher and Clint Potter.
 - Learned the fundamentals of high resolution imaging in electron microscopy.

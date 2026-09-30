@@ -81,5 +81,5 @@
 
 ### Professional Memberships
 
-- Biophysical Society (2011 - 2016), [http://www.biophysics.org/](http://www.biophysics.org/)
-- American Society for Biochemistry and Molecular Biology (2025) [https://www.asbmb.org/](https://www.asbmb.org/)
+- Biophysical Society (2011 - 2016), <http://www.biophysics.org/>
+- American Society for Biochemistry and Molecular Biology (2025) <https://www.asbmb.org/>

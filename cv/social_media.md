@@ -1,9 +1,7 @@
 ## Social media links
 
-- [YouTube](https://www.youtube.com/neilvosslab)
-- [Github](https://github.com/vosslab)
-- [Bluesky](https://bsky.app/profile/neilvosslab.bsky.social)
-- [Facebook](https://fb.me/neilvosslab)
-- [LinkedIn](https://www.linkedin.com/in/vosslab)
-
-Last Modified Friday, August 25, 2023
+- YouTube: <https://www.youtube.com/neilvosslab>
+- Github: <https://github.com/vosslab>
+- Bluesky: <https://bsky.app/profile/neilvosslab.bsky.social>
+- Facebook: <https://fb.me/neilvosslab>
+- LinkedIn: <https://www.linkedin.com/in/vosslab>

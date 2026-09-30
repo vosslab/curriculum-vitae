@@ -1,23 +1,23 @@
 ## Posters and Presentations
 
 1. NR Voss (**Presentation**)
-   May 19-20, Lincoln Legacy Teaching and Learning Community, Urbana, IL
-   [https://lincolnlegacytlc.web.illinois.edu/index.html](https://lincolnlegacytlc.web.illinois.edu/index.html)
+   May 19-20, 2025, Lincoln Legacy Teaching and Learning Community, Urbana, IL
+   <https://lincolnlegacytlc.web.illinois.edu/index.html>
 
 1. NR Voss (**virtual presentation**)
    Open Education Week, March 5, 2025
-   [https://oeweek.oeglobal.org/](https://oeweek.oeglobal.org/)
+   <https://oeweek.oeglobal.org/>
 
 1. NR Voss (**Poster**)
    YAML Integrity: A Tool for Generating Sharing-Resistant STEM Assessments
    2023 Noyce Summit, Transforming Teacher Preparation and Retention
    June 26-28 in Washington, DC
-   [https://www.nsfnoyce.org/2023-noyce-summit/](https://www.nsfnoyce.org/2023-noyce-summit/)
+   <https://www.nsfnoyce.org/2023-noyce-summit/>
 
 1. G Gillespie, D Jamieson, O Onajole, and NR Voss (**Selected Poster**)
    Penta-Fluorination of Phe-Phe Motif to Overcome Homochirality in Hierarchical Self-Assembly of Hydrogels
    ACS Fall 2022: Sustainability in a Changing World, Chicago, IL: August 2022
-   [https://www.acs.org/pressroom/news-room/meeting-news-releases-fall-2022.html](https://www.acs.org/pressroom/news-room/meeting-news-releases-fall-2022.html)
+   <https://www.acs.org/pressroom/news-room/meeting-news-releases-fall-2022.html>
 
 1. NR Voss (**Invited Talk**)
    The Future of Appion: a Road Map Ahead

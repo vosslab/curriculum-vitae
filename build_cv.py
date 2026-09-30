@@ -2,6 +2,7 @@
 """Build distribution documents from cv/*.md; never import generated documents."""
 
 import copy
+from datetime import datetime
 import hashlib
 import json
 from pathlib import Path
@@ -11,6 +12,7 @@ import subprocess
 import tempfile
 import uuid
 from zipfile import ZipFile, ZIP_DEFLATED
+from zoneinfo import ZoneInfo
 
 from docx import Document
 from docx.enum.text import WD_ALIGN_PARAGRAPH
@@ -108,15 +110,54 @@ def student_lists(document):
 	return selected
 
 
+def identifier_url(kind, value):
+	"""Resolve recognized citation identifiers through fixed canonical services."""
+	patterns = {
+		"doi:": (r"10\.\d{4,9}/\S+", "https://doi.org/", ""),
+		"pmid:": (r"[1-9]\d*", "https://pubmed.ncbi.nlm.nih.gov/", "/"),
+		"pmcid:": (r"PMC[1-9]\d*", "https://pmc.ncbi.nlm.nih.gov/articles/", "/"),
+	}
+	pattern, base, suffix = patterns[kind.lower()]
+	if re.fullmatch(pattern, value):
+		return base + value + suffix
+	return None
+
+
+def link_citation_identifiers(items):
+	"""Link plain identifier fields without changing source text or punctuation."""
+	result = []
+	for item in items:
+		if (isinstance(item, dict) and item.get("t") == "Str" and len(result) >= 2
+			and result[-1].get("t") == "Space" and result[-2].get("t") == "Str"
+			and result[-2]["c"].lower() in {"doi:", "pmid:", "pmcid:"}):
+			value = item["c"].rstrip(".;,")
+			target = identifier_url(result[-2]["c"], value)
+			if target:
+				result.append({"t": "Link", "c": [
+					["", [], []], [{"t": "Str", "c": value}], [target, ""]]})
+				punctuation = item["c"][len(value):]
+				if punctuation:
+					result.append({"t": "Str", "c": punctuation})
+				continue
+		result.append(item)
+	return result
+
+
 def format_links(node, output_format):
-	"""Keep complete link targets; give long visible URLs a narrow typeface."""
+	"""Show exact destinations; give long visible URLs a narrow typeface."""
 	if isinstance(node, list):
-		return [format_links(item, output_format) for item in node]
+		items = [format_links(item, output_format) for item in node]
+		if all(isinstance(item, dict) for item in items):
+			return link_citation_identifiers(items)
+		return items
 	if not isinstance(node, dict):
 		return node
 	result = {key: format_links(value, output_format) for key, value in node.items()}
 	if result.get("t") == "Link":
-		visible = inline_text(result["c"][1])
+		visible = result["c"][2][0]
+		# ASVS 1.2.1: Pandoc escapes destination text for each output context.
+		if inline_text(result["c"][1]) != visible:
+			result["c"][1] = [{"t": "Str", "c": visible}]
 		if len(visible) > 35 and visible.startswith(("https://", "http://")):
 			attrs = ["", ["cv-url"], []]
 			if output_format == "docx":
@@ -125,13 +166,30 @@ def format_links(node, output_format):
 	return result
 
 
+def citation_line_breaks(node):
+	"""Preserve authored field lines within publication and presentation entries."""
+	if isinstance(node, list):
+		return [citation_line_breaks(item) for item in node]
+	if not isinstance(node, dict):
+		return node
+	if node.get("t") == "SoftBreak":
+		return {"t": "LineBreak"}
+	return {key: citation_line_breaks(value) for key, value in node.items()}
+
+
 def export_document(document, output_format):
 	"""Add output presentation without changing the source content or order."""
 	result = copy.deepcopy(document)
 	selected = student_lists(document)
 	blocks = []
+	in_citations = False
 	for index, original in enumerate(result["blocks"]):
 		block = format_links(original, output_format)
+		if block["t"] == "Header" and block["c"][0] <= 2:
+			in_citations = inline_text(block["c"][2]).casefold() in {
+				"publications", "posters and presentations"}
+		if in_citations and block["t"] == "OrderedList":
+			block = citation_line_breaks(block)
 		if output_format == "docx" and block["t"] == "Header":
 			if block["c"][0] == 1:
 				block = {"t": "Div", "c": [
@@ -183,7 +241,9 @@ def reference_document(path):
 	section.page_width, section.page_height = Inches(8.5), Inches(11)
 	for margin in ("top_margin", "bottom_margin", "left_margin", "right_margin"):
 		setattr(section, margin, Inches(0.6))
-	section.footer_distance = Inches(0.25)
+	# Reserve a footer band above the printer's 0.6-inch bottom limit.
+	section.bottom_margin = Inches(0.85)
+	section.footer_distance = Inches(0.625)
 	for name in ("Normal", "Body Text", "First Paragraph", "Compact"):
 		style = doc.styles[name] if name in doc.styles else doc.styles.add_style(name, WD_STYLE_TYPE.PARAGRAPH)
 		set_font(style)
@@ -227,6 +287,9 @@ def reference_document(path):
 		p._p.append(field)
 		p.add_run(separator)
 	set_font(doc.styles["Footer"], size=8)
+	doc.styles["Footer"].paragraph_format.space_before = Pt(0)
+	doc.styles["Footer"].paragraph_format.space_after = Pt(0)
+	doc.styles["Footer"].paragraph_format.line_spacing = 1
 	doc.save(path)
 
 
@@ -255,7 +318,7 @@ def finish_docx(path):
 		if paragraph._p.xpath("./w:pPr/w:numPr"):
 			num_ids = paragraph._p.xpath("./w:pPr/w:numPr/w:numId/@w:val")
 			paragraph.paragraph_format.space_before = Pt(0)
-			paragraph.paragraph_format.space_after = Pt(7 if any(n in decimal_ids for n in num_ids) else 2)
+			paragraph.paragraph_format.space_after = Pt(12 if any(n in decimal_ids for n in num_ids) else 2)
 			paragraph.paragraph_format.alignment = WD_ALIGN_PARAGRAPH.LEFT
 			paragraph.paragraph_format.left_indent = Inches(0.48)
 			paragraph.paragraph_format.first_line_indent = Inches(-0.25)
@@ -371,10 +434,12 @@ def verify_fonts():
 def write_site(destination, html, pdf_path, docx_path):
 	"""Stage only public CV files, with paths relative to the Pages project root."""
 	destination.mkdir()
+	base = "https://vosslab.github.io/curriculum-vitae/"
 	navigation = ('<nav class="cv-downloads" aria-label="CV formats">'
-		'<a href="neil_voss_cv.pdf">View PDF</a> | '
-		'<a href="neil_voss_cv.docx" download>Download DOCX</a> | '
-		'<a href="https://github.com/vosslab/curriculum-vitae">GitHub source</a>'
+		f'<div>PDF: <a href="{base}neil_voss_cv.pdf">{base}neil_voss_cv.pdf</a></div>'
+		f'<div>DOCX: <a href="{base}neil_voss_cv.docx" download>{base}neil_voss_cv.docx</a></div>'
+		'<div>GitHub source: <a href="https://github.com/vosslab/curriculum-vitae">'
+		'https://github.com/vosslab/curriculum-vitae</a></div>'
 		'</nav>')
 	page = html.replace('href="../styles/cv.css"', 'href="styles/cv.css"')
 	page = page.replace('<body><main>', '<body>' + navigation + '<main>')
@@ -394,7 +459,9 @@ def main():
 	verify_fonts()
 	OUTPUT.mkdir(exist_ok=True)
 	(OUTPUT / "pdf").mkdir(exist_ok=True)
-	source = assemble_source()
+	today = datetime.now(ZoneInfo("America/Chicago"))
+	modified = f"Last Modified {today:%A, %B} {today.day}, {today.year}"
+	source = assemble_source() + "\n" + modified + "\n"
 	document = json.loads(pandoc("-f", "gfm", "-t", "json", text=source))
 	with tempfile.TemporaryDirectory(prefix="cv-build-", dir=OUTPUT) as temporary:
 		temporary = Path(temporary)

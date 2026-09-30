@@ -3,7 +3,7 @@
 My research has shifted toward education-focused software development in biology and bioinformatics.
 I develop open educational resources and computational tools that support student learning. I
 received a grant to release OER homework questions, available at
-[https://biologyproblems.org/](https://biologyproblems.org/)
+<https://biologyproblems.org/>
 
 My work sits at the intersection of bioinformatics, programming, and education. Current projects
 include large-scale creation and evaluation of free homework problems, computational biology tools
