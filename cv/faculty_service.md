@@ -2,21 +2,23 @@
 
 ### Advising Responsibilities
 
-- 2011/2012 Academic year: 14 students
-- 2012/2013 Academic year: 35 students
-- 2013/2014 Academic year: 38 students
-- 2014/2015 Academic year: 12 students (research leave)
-- 2015/2016 Academic year: 40 students
-- 2016/2017 Academic year: 20 students
-- 2017/2018 Academic year: 15 students
-- 2018/2019 Academic year: 11 students
-- 2019/2020 Academic year: 20 students
-- 2020/2021 Academic year: 35 students
-- 2021/2022 Academic year: 27 students
-- 2022/2023 Academic year: 20 students (hired department advisor)
-- 2023/2024 Academic year: 13 students
-- 2024/2025 Academic year: 10 students
+Academic advising concluded after 2025/2026 with the university transition to centralized advisors.
+
 - 2025/2026 Academic year: 3 students
+- 2024/2025 Academic year: 10 students
+- 2023/2024 Academic year: 13 students
+- 2022/2023 Academic year: 20 students (hired department advisor)
+- 2021/2022 Academic year: 27 students
+- 2020/2021 Academic year: 35 students
+- 2019/2020 Academic year: 20 students
+- 2018/2019 Academic year: 11 students
+- 2017/2018 Academic year: 15 students
+- 2016/2017 Academic year: 20 students
+- 2015/2016 Academic year: 40 students
+- 2014/2015 Academic year: 12 students (research leave)
+- 2013/2014 Academic year: 38 students
+- 2012/2013 Academic year: 35 students
+- 2011/2012 Academic year: 14 students
 
 ### Faculty Search Committees
 
@@ -56,19 +58,24 @@
 
 - Vice Chair, College of Science, Health, and Pharmacy Council (September 2026 - present)
 - Member, LibreTexts AI Initiative, leading AI-assisted homework adaptation and testing for ADAPT (2026)
-- Member, Roosevelt University AI Working Group (2025-2026; concluded Spring 2026)
+- Member, Roosevelt University AI Working Group (2023-2026)
 - Member, Teaching Modalities Task Force (Spring 2025)
-- Secretary, College of Science, Health, and Pharmacy Council (2024-2025)
-- Member, Senate Executive Committee (2024)
-- Member, College Executive Committee (2024)
-- Elected to the Research and Professional Leave Committee (April 2024)
-- University Senator (Fall 2022 - August 2024)
-- Schaumburg Natural Science Club, lead faculty advisor, (Fall 2016 - Spring 2020)
-- Illinois Articulation Initiative (IAI) Major Biology, Representative, (Fall 2012 - *present*)
-- Math and Science Resource Center Committee, Member (Spring 2012 - *present*)
+- Secretary/co-secretary, College of Science, Health, and Pharmacy Council
+  (intermittent service, 2021-2022 and 2023-2025)
+- Member, Senate Executive Committee (2023-2024)
+- Member, College of Science, Health, and Pharmacy Executive Committee (2022-2024)
+- Member, Research and Professional Leave Committee (2023-2025)
+- Member, College of Arts and Sciences Executive Committee, including reappointment,
+  tenure, and promotion review (2019, 2021)
+- Member, Departmental Peer Review Committees for reappointment, tenure, and promotion
+  (2016-2018, 2020, 2024-2025)
+- University Senator (2022 - 2024)
+- Schaumburg Natural Science Club, lead faculty advisor, (2016 - 2020)
+- Illinois Articulation Initiative (IAI) Major Biology, Representative, (2012 - *present*)
+- Math and Science Resource Center Committee, Member (2012 - *present*)
 - Junior & Senior Visit Day, Chicago (Fall 2015)
 - Math and Science Research Symposium Liquid Nitrogen Ice Cream Demonstration (Spring 2014, 2015, and 2017)
-- University Senator (Fall 2012 - Spring 2014)
+- University Senator (2012 - 2014)
 - Graduate Student Orientation (Jan 2012)
 - Open House Representative (Apr 2011, Nov 2011, Mar 2012, Apr 2012, Oct 2012, Apr 2013)
 
@@ -82,13 +89,18 @@
 
 - 2016 National Science Foundation (NSF) Graduate Research Fellowship Program (GRFP) panelist
 
-### Other service
+### Community outreach
 
 - Host and organizer, *Stump the Vibe Coder* (2026 - present), a live podcast and coding series
   with students. Develop and test educational games, scientific simulations, and software from
   student-generated challenges using AI coding assistants; 34 episodes as of September 2026.
   <https://www.youtube.com/playlist?list=PL5LJPD9b2pRYsw2sU3LRCDhvDSiZ26E48>
-- Department Website Developer (Fall 2010 - present)
+- Member, Northern Illinois LEGO Train Club (NILTC) (2022 - present); participate in
+  public library LEGO exhibitions. <https://niltc.org/>
+
+### Other service
+
+- Department Website Developer (2010 - present)
 - Fact Sheet (B.S., Biochemistry)
 
 ### Professional Memberships

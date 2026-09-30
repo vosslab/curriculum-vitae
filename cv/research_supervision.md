@@ -4,11 +4,11 @@ Department consists of primarily undergraduates along with a master's program in
 
 ### Master's Thesis Students
 
-- Greg Gillespie (Fall 2021 - Summer 2024)
-- Richard Helmuth (Spring 2019 - Spring 2021), did not finish
+- Greg Gillespie (2021 - 2024)
+- Richard Helmuth (2019 - 2021), did not finish
 - Bao Tran (Fall 2018 - Summer 2019)
-- Amar Kumar (Spring 2015 - Summer 2016)
-- Kayla Fouch (Spring 2014 - Spring 2017), did not finish
+- Amar Kumar (2015 - 2016)
+- Kayla Fouch (2014 - 2017), did not finish
 
 ### 2025: 1 new students
 

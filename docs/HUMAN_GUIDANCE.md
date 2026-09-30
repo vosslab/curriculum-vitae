@@ -42,6 +42,7 @@ origin belongs there too. Rules: [REPO_STYLE.md](REPO_STYLE.md).
 - The author supplied PMIDs 10592279 and 11673240 for the two older biomedical papers and
   clarified that these records omit his middle initial.
 - The author supplied ORCID https://orcid.org/0000-0003-1392-5187 for the CV.
+- Place ORCID in Publications, not at the top of the CV.
 - Save the supplied ORCID/ResearcherID metadata for the Si(001) and alloy optical-properties
   papers, including DOIs, contributor lists, WOS identifiers, and record provenance.
 - Complete supported reconciliation after comparing sources; do not leave straightforward
@@ -83,3 +84,19 @@ origin belongs there too. Rules: [REPO_STYLE.md](REPO_STYLE.md).
   the ADAPT WeBWorK Handbook, and the BCHM 355/455 Biochemistry book.
 - Use year ranges without semesters for faculty search committee dates.
 - I was elected Vice Chair of the CSHP College Council in September 2026.
+- Date ranges spanning more than one year generally need only years, without months.
+- I joined the Northern Illinois LEGO Train Club (NILTC), probably in August 2022, and
+  participate in its public library events. I represent myself at these events.
+- NILTC plans to change from 501(c)(7) to 501(c)(3) status soon; this is a reported future
+  transition, not a confirmed completed change.
+- Make the distinction between unbulleted and bulleted material in Research Appointments clear.
+- Review Current Position for the same clarity of appointment and affiliation formatting.
+- Compare the SERVICE archive with faculty search and other committee entries, focusing on
+  membership rather than additional chair roles. I served as CSHP Council secretary off and on
+  and wrote its minutes.
+- I served on the Senate Executive Committee and the College Executive Committee at the
+  same time at some point; I am unsure of the college committee's exact name.
+- List Advising Responsibilities newest first. My academic advising is finished because the
+  university has moved to centralized advisors.
+- I had course buy-outs in Spring 2025 and Spring 2026. I taught BIOL 383/483-10/24,
+  Special Topics: Biology and Ethics in Film (remote), again in Summer 2026.

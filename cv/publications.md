@@ -1,5 +1,7 @@
 ## Publications
 
+**ORCID:** <https://orcid.org/0000-0003-1392-5187>
+
 Published 23 peer-reviewed works, including journal articles and book chapters. Web of Science Core Collection profile: 2,961 citations; h-index 17 (September 30, 2026; <http://www.researcherid.com/rid/K-6244-2012>). List of peer-reviewed publications is below.
 
 Citation style: NLM (MEDLINE/PubMed), <https://www.nlm.nih.gov/bsd/uniform_requirements.html>,

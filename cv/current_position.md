@@ -1,5 +1,5 @@
 ## Current Position
 
-**Associate Professor of Biology** Roosevelt University Aug. 2016 - *present*
+**Associate Professor of Biology at Roosevelt University** 2016 - present
 
-Department of Biological and Physical Sciences
+Department: Biological and Physical Sciences.

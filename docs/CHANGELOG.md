@@ -2,6 +2,37 @@
 
 ### CV publishing
 
+- Recounted the faculty teaching history as 20 distinct course preparations, counting lectures
+  and labs separately; replaced the stale total of 17 and clarified the counting convention.
+
+- Added author-confirmed Spring 2025 and Spring 2026 course buy-outs and the section numbers
+  for the already listed Summer 2026 Biology and Ethics in Film course.
+
+- Reversed advising counts to newest first and marked advising as concluded after 2025/2026
+  following the author-confirmed transition to centralized advisors.
+
+- Recorded the author's recollection of overlapping Senate and College Executive Committee
+  service, consistent with the already listed 2023-2024 overlap.
+
+- Audited the available SERVICE archive for committee omissions. Added CAS Executive and
+  departmental peer-review service; expanded documented secretary, executive committee,
+  research-leave, and AI working-group dates. No additional faculty search was established.
+
+- Matched Current Position to the appointment hierarchy: bold role and institution, plain
+  dates, and a labeled department line.
+
+- Clarified Research Appointments with labeled affiliation, advisor, collaborator, and grant
+  context; reserved bullets for research activities and removed isolated bold emphasis.
+
+- Moved ORCID from the profile header to Publications at the author's request.
+
+- Added NILTC public-library participation under community outreach, alongside the student
+  podcast, using the author's recalled 2022 membership start. Recorded the reported planned
+  tax-status transition in supporting notes only.
+
+- Simplified date ranges longer than one year across appointments, grants, service, teaching,
+  and research supervision; retained detail for shorter roles and individual events.
+
 - Added the author-confirmed election as CSHP College Council Vice Chair in September 2026.
 
 - Used the supplied Aella wiki to expand the podcast entry with its 2026 start, hosting role,

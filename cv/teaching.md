@@ -1,11 +1,11 @@
 ## Teaching Experience
 
-Teaching load: 2010-2016: six courses per year; Spring 2017-Spring 2021: seven courses per year; nine contact hours per week. 17 different courses. &dagger; - denotes new course preparation for that semester.
+Teaching load: 2010-2016: six courses per year; 2017-2021: seven courses per year; nine contact hours per week. 20 distinct course preparations, counting lectures and labs separately. &dagger; - denotes new course preparation for that semester.
 
 ### Curriculum Development
 
 - Designed the M.S. Bioinformatics curriculum and secured program approval (2024-2025).
-- Committee lead, BIOL 201-202 curriculum realignment (Fall 2023 - Fall 2025).
+- Committee lead, BIOL 201-202 curriculum realignment (2023 - 2025).
 
 ### Fall 2026
 
@@ -15,12 +15,13 @@ Teaching load: 2010-2016: six courses per year; Spring 2017-Spring 2021: seven c
 
 ### Summer 2026
 
-- BIOL 383/483, Special Topics: Biology and Ethics in Film (remote)
+- BIOL 383/483-10/24, Special Topics: Biology and Ethics in Film (remote)
 
 ### Spring 2026
 
 - BCHM 355/455-20, Biochemistry Lecture (face-to-face)
 - BCHM 356/456-20, Biochemistry Lab (face-to-face)
+- *Course buy-out*
 
 ### Fall 2025
 
@@ -31,8 +32,8 @@ Teaching load: 2010-2016: six courses per year; Spring 2017-Spring 2021: seven c
 ### Spring 2025
 
 - BCHM 355/455-20, Biochemistry Lecture (remote)
-
 - BCHM 356/456-20, Biochemistry Lab (face-to-face)
+- *Course buy-out*
 
 ### Fall 2024
 

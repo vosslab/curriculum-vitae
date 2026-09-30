@@ -275,3 +275,113 @@ participation in a stream does not establish an individual research-supervision 
 
 **Owner.** [../cv/faculty_service.md](../cv/faculty_service.md) and
 [../cv/teaching.md](../cv/teaching.md).
+
+### Year-only extended date ranges
+
+**Decision.** Show years alone for ranges longer than one year, including established ongoing
+roles. Apply the same precision to month and semester endpoints.
+
+**Why.** The author prefers less date detail for longer activities.
+
+**Consequence.** Keep months or semesters for shorter appointments, individual events, and
+semester teaching headings. Preserve original date evidence in the historical notes.
+
+**Owner.** CV section sources in `cv/`.
+
+### Community outreach through library exhibitions
+
+**Decision.** Group the student podcast and NILTC public-library participation under community
+outreach. Use 2022-present for NILTC membership, based on the author's recalled August 2022 start.
+
+**Why.** The author reports personal participation in public library events. The
+[NILTC past shows](https://niltc.org/past-shows) list corroborates the club's recurring library
+exhibitions, but does not establish which individual shows the author attended.
+
+**Consequence.** Describe public participation without claiming official university
+representation, a leadership role, specific event attendance, or formal STEM instruction.
+The author reports a planned transition from 501(c)(7) to 501(c)(3); omit tax status from the
+CV because it is unnecessary to describe his participation and the transition is not complete.
+
+**Owner.** [../cv/faculty_service.md](../cv/faculty_service.md).
+
+### Research appointment hierarchy
+
+**Decision.** Keep bold appointment lead lines with dates. Use labeled plain paragraphs for
+affiliations, advisors, collaborators, and grants; use bullets for activities and contributions.
+Apply the same hierarchy to Current Position, with role and institution in the bold lead line.
+
+**Why.** Mixing contextual names and research work in the same lists obscured their roles.
+
+**Consequence.** Some appointments have context only and need no bullet list. Preserve their
+existing facts without inventing accomplishments to fill out the layout.
+
+**Owner.** [../cv/research_appointments.md](../cv/research_appointments.md) and
+[../cv/current_position.md](../cv/current_position.md).
+
+### Service archive committee reconciliation
+
+**Decision.** Add documented CAS Executive Committee and departmental peer-review membership.
+Expand existing committee dates only where records identify the author. Describe CSHP secretary
+service as intermittent. Keep the existing faculty search list.
+
+**Why.** Read-only review used `~/Documents/teaching/SERVICE/`; the requested WorkExternal
+volume path was unavailable. Evidence includes:
+
+- January 25, 2019 CAS Executive Committee review letters and January 22, 2021 CAS Executive
+  Committee letters identify Neil Voss as a member. List those documented years without
+  assuming an uninterrupted 2019-2021 term.
+- Departmental peer-review letters identify membership in 2016, 2017, 2018, 2020, and 2025.
+  The February 2025 self-evaluation also confirms peer-committee service during the 2024 review
+  period. Several letters identify him as chair, but this update focuses on membership.
+- Council minutes submitted by Neil cover 2021 and 2022. The October 12, 2023 representatives
+  roster explicitly records his Fall 2023 co-secretary election alongside Mary Hornick.
+  April 2024 election materials and the February 2025 self-evaluation confirm later secretary
+  service. The author's clarification establishes intermittent service, not a continuous term.
+- The October 2023 roster identifies a College Executive Committee term elected Spring 2022
+  and expiring Spring 2024, Senate Executive membership, and Research and Professional Leave
+  Committee membership for 2023-2024. April 2024 materials record another one-year leave
+  committee election, supporting 2023-2025. The self-evaluation reports executive service
+  ending in September 2024.
+- The author's recollection of simultaneous Senate and College Executive service agrees with
+  the roster evidence: both roles overlap in 2023-2024. The roster calls the college body the
+  College Executive Committee within CSHP; the CV spells out the college name for clarity.
+- November 2023 council minutes record Neil reporting on the Generative AI Working Group,
+  establishing service before the previously listed 2025 start. The Spring 2026 end remains
+  author-recalled; the CV now uses years alone.
+
+**Consequence.** Folder possession alone does not establish membership. BA/BS curriculum,
+graduate-program committee, and additional CSHP RTP years remain candidates needing clearer
+appointment and date evidence. Search folders match already listed searches; this is not proof
+that every historical search is represented. Some council files named or filed under 2013
+contain 2023 meeting content; use internal dates and corroborating rosters. Preserve private
+personnel-review contents in the source archive rather than copying them into CV documentation.
+
+**Owner.** [../cv/faculty_service.md](../cv/faculty_service.md).
+
+### Completed academic advising record
+
+**Decision.** List annual advising counts in reverse chronological order and state that academic
+advising concluded after the last listed year, 2025/2026, with centralized advisors.
+
+**Why.** The author confirms that this responsibility has ended and requests newest-first order.
+
+**Consequence.** Preserve all historical counts and notes; do not create a speculative zero-student
+2026/2027 entry or imply an end to research supervision.
+
+**Owner.** [../cv/faculty_service.md](../cv/faculty_service.md).
+
+### Distinct teaching preparation count
+
+**Decision.** Report 20 distinct faculty course preparations through Fall 2026. Count lectures
+and labs separately, distinct special topics separately, and repeated or cross-listed offerings
+once. Treat BCHM 354/454 and 356/456 as the same listed Biochemistry Lab preparation.
+
+**Why.** The listed history contained 17 preparations through Spring 2021. Molecular Biology
+(Fall 2021), Biology and Ethics in Film (Spring 2022), and Biostatistics (Fall 2024) raise it to 20.
+
+**Consequence.** Exclude pre-faculty teaching assistantships, course buy-outs, section numbers,
+and modality changes. Normalize Application/Applications of Biotechnology as one course.
+The count describes the listed history, not independent verification of its completeness or
+the teaching-load/contact-hour statement.
+
+**Owner.** [../cv/teaching.md](../cv/teaching.md).
