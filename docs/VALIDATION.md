@@ -46,6 +46,12 @@ rewriting; their original checksums remain enforced by the build.
 
 ## Visual and accessibility review
 
+The Pages addition was checked locally at 390 and 1280 pixels, including the format navigation.
+All local HTML links and CSS font references resolve within the staged site. Downloaded document
+bytes match the PDF and DOCX build outputs; no original exports, QA files, or Git files are staged.
+All 118 repository checks pass. Live Pages deployment has not yet been verified: the available
+GitHub API credential returned HTTP 401, and the workflow changes still need committing and pushing.
+
 Local verification includes PDF page rendering, a LibreOffice rendering of the DOCX, and browser
 checks of the HTML preview at narrow and wide widths. Rendering evidence belongs in ignored
 `output/qa/`; it is not an alternate source.

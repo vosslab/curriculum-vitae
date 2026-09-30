@@ -46,9 +46,23 @@ There is no editable Word template or Word-to-Markdown workflow.
 Research Supervision receive two-column presentation without source-level layout markup.
 
 **Consequence.** GitHub keeps ordinary lists. HTML becomes single-column on narrow screens.
-PDF and DOCX have independent pagination. Local HTML is a preview, not a published website.
+PDF and DOCX have independent pagination. The same HTML also supplies the public GitHub Pages CV.
 
 **Owner.** [../build_cv.py](../build_cv.py) and [../styles/cv.css](../styles/cv.css).
+
+### Publish the existing build
+
+**Decision.** Stage a static site in ignored `output/site/` with format links, the HTML CV,
+PDF, DOCX, stylesheet, and verified font assets. Deploy it after successful main-branch builds.
+
+**Why.** Visitors need stable public document links without an Actions artifact download.
+Reusing the document build keeps the site and downloadable CV consistent.
+
+**Consequence.** Pull requests never deploy. Only the deploy job receives Pages write and
+OIDC permissions. Pages uses GitHub Actions as its source; generated files stay out of Git.
+
+**Owner.** [../.github/workflows/build.yml](../.github/workflows/build.yml) and
+[../build_cv.py](../build_cv.py).
 
 ### Fonts travel with the outputs
 

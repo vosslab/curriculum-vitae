@@ -66,6 +66,10 @@ code, pre { font-family: "Atkinson Hyperlegible Mono", monospace; }
 .cv-url { font-family: "IBM Plex Sans Condensed", sans-serif; font-variant-numeric: slashed-zero; }
 .student-list { break-inside: avoid; }
 .student-list ul { column-count: 2; column-gap: 0.25in; }
+.cv-downloads { margin-bottom: 16pt; text-align: center; line-height: 1.6; }
+@media print {
+  .cv-downloads { display: none; }
+}
 table { border-collapse: collapse; width: 100%; }
 th, td { padding: 3pt 6pt; text-align: left; vertical-align: top; }
 @media screen {

@@ -2,6 +2,11 @@
 
 ### CV publishing
 
+- Added a simple GitHub Pages site with the HTML CV and direct PDF/DOCX links. Adapted the
+  supplied deployment template into the existing build, with publication restricted to `main`.
+- Documented Pages setup and public links; staged only CV documents, CSS, and licensed font assets.
+- Updated checkout, setup-python, and upload-artifact to v7 to address the Node.js 20
+  deprecation warning reported by the first successful GitHub Actions build.
 - Updated the GitHub Actions runner to Ubuntu 26.04 after checking hosted-runner and Python 3.12
   availability. Retained push, pull-request, and manual build triggers.
 - Recorded the monochrome PDF/DOCX preference, with dark blue links as the only color;

@@ -19,6 +19,8 @@ origin belongs there too. Rules: [REPO_STYLE.md](REPO_STYLE.md).
 - Include my supplied YouTube, GitHub, Bluesky, Facebook, and LinkedIn links.
 - Keep PDF and DOCX monochrome, with dark blue URLs as the only color.
 - Prefer the newer Ubuntu LTS version for the GitHub Actions build runner.
+- Publish a simple GitHub Pages CV with PDF and DOCX links, using the starter repository's
+  deploy-pages workflow as the template.
 - Software Development and Support needs a later author-led update: I reported 126 GitHub
   repositories on September 30, 2026. This is guidance for a future edit, not an automatically
   verified CV statistic or authorization to rewrite the existing section.

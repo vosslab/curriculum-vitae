@@ -6,6 +6,7 @@ import hashlib
 import json
 from pathlib import Path
 import re
+import shutil
 import subprocess
 import tempfile
 import uuid
@@ -351,6 +352,28 @@ def verify_fonts():
 				raise ValueError(f"Font embedding is restricted: {filename}")
 
 
+def write_site(destination, html, pdf_path, docx_path):
+	"""Stage only public CV files, with paths relative to the Pages project root."""
+	destination.mkdir()
+	navigation = ('<nav class="cv-downloads" aria-label="CV formats">'
+		'<a href="neil_voss_cv.pdf">View PDF</a> | '
+		'<a href="neil_voss_cv.docx" download>Download DOCX</a> | '
+		'<a href="https://github.com/vosslab/curriculum-vitae">GitHub source</a>'
+		'</nav>')
+	page = html.replace('href="../styles/cv.css"', 'href="styles/cv.css"')
+	page = page.replace('<body><main>', '<body>' + navigation + '<main>')
+	(destination / "index.html").write_text(page)
+	# ASVS 5.3.2: fixed output paths and a verified font manifest define the public files.
+	shutil.copy2(pdf_path, destination / "neil_voss_cv.pdf")
+	shutil.copy2(docx_path, destination / "neil_voss_cv.docx")
+	(destination / "styles").mkdir()
+	shutil.copy2(ROOT / "styles/cv.css", destination / "styles/cv.css")
+	font_destination = destination / "assets/fonts"
+	font_destination.mkdir(parents=True)
+	for entry in json.loads((FONTS / "provenance.json").read_text()):
+		shutil.copy2(FONTS / entry["file"], font_destination / entry["file"])
+
+
 def main():
 	verify_fonts()
 	OUTPUT.mkdir(exist_ok=True)
@@ -379,11 +402,15 @@ def main():
 		pdf = PdfReader(pdf_path)
 		if not pdf.pages or "/StructTreeRoot" not in pdf.trailer["/Root"]:
 			raise ValueError("PDF is empty or missing its accessibility structure")
+		write_site(temporary / "site", html, pdf_path, docx_path)
 		# Publish only after both formats have built successfully.
 		docx_path.replace(OUTPUT / docx_path.name)
 		pdf_path.replace(OUTPUT / "pdf" / pdf_path.name)
 		(OUTPUT / "neil_voss_cv.html").write_text(html)
 		(OUTPUT / "CV.md").write_text(source)
+		if (OUTPUT / "site").exists():
+			shutil.rmtree(OUTPUT / "site")
+		(temporary / "site").replace(OUTPUT / "site")
 	print(f"Built {len(pdf.pages)} PDF pages and an accessible-structure DOCX in {OUTPUT}")
 
 
