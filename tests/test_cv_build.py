@@ -61,7 +61,8 @@ def test_only_multistudent_years_get_columns(sample):
 		"First student, master's", "Second student, undergrad"]
 	assert not groups[0].xpath(".//table")
 	assert len(root.xpath('//span[@class="cv-url"]')) == 1
-	assert len(root.xpath("//ol/li[1]//br")) == 2
+	assert len(root.xpath("//ol/li[1]//br")) == 1
+	assert root.xpath('//span[@class="citation-details"]/text()') == ["Example J. 2025;1:2-3."]
 	for link in root.xpath('//a[@href]'):
 		assert "".join(link.itertext()) == link.get("href")
 
@@ -73,6 +74,8 @@ def test_docx_has_native_lists_columns_and_embedded_fonts(sample, tmp_path):
 		"-o", output, text=json.dumps(cv.export_document(sample, "docx")))
 	cv.finish_docx(output)
 	doc = Document(output)
+	assert doc.styles["CV Citation"].font.size == cv.Pt(10)
+	assert doc.styles["CV Citation Link"].font.size == cv.Pt(10)
 	assert len(doc.sections) == 3
 	assert [s._sectPr.find(cv.qn("w:cols")).get(cv.qn("w:num"), "1") for s in doc.sections] == ["1", "2", "1"]
 	assert not doc.tables
@@ -84,7 +87,7 @@ def test_docx_has_native_lists_columns_and_embedded_fonts(sample, tmp_path):
 	assert (doc.styles["Heading 1"].paragraph_format.left_indent
 		< doc.styles["Heading 2"].paragraph_format.left_indent
 		< doc.styles["Heading 3"].paragraph_format.left_indent)
-	assert any(p.text.count("\n") == 2 and p.paragraph_format.space_after == cv.Pt(12)
+	assert any(p.text.count("\n") == 1 and p.paragraph_format.space_after == cv.Pt(12)
 		for p in doc.paragraphs)
 	assert doc.part.numbering_part.element.xpath('.//w:numFmt[@w:val="decimal"]')
 	assert any(p._p.xpath("./w:pPr/w:numPr") for p in doc.paragraphs)

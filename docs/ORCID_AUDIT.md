@@ -5,6 +5,10 @@
 The findings below are the pre-reconciliation audit, retained as evidence. They no longer describe
 missing fields in the current CV. The author requested implementation of all supported corrections.
 
+The author subsequently confirmed the 2026 department name as Department of Biological and
+Physical Sciences. This supersedes the saved ORCID department name for the current affiliation;
+the historical assistant-professor appointment retains the snapshot wording.
+
 - Merged the two duplicate pairs; the published list now contains 23 distinct works.
 - Added all 11 missing DOIs, 17 PMIDs, and 13 PMCIDs from the PubMed dump; retained fuller
   publication dates, Epub dates, and the Stagg erratum notice.

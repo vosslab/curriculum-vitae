@@ -124,14 +124,16 @@ visible URLs do not certify the safety of a destination or its redirects.
 
 ### Multiline citation layout
 
-**Decision.** Preserve authored source line breaks inside numbered publication and presentation
-entries during conversion; use 12 pt after numbered entries in HTML/PDF and DOCX.
+**Decision.** Keep publication authors on a separate line, then join the title to journal details
+in 10 pt type, including identifier links. Preserve presentation line breaks and use 12 pt after
+numbered entries in HTML/PDF and DOCX.
 
 **Why.** The author wants titles and adjacent entries to be easier to distinguish.
 
 **Consequence.** Keep authors, titles, and publication or meeting details on separate source lines.
-The converter turns those newlines into visible line breaks, retaining native list numbering and
-keeping entries together across pages. Other sections retain ordinary Markdown line wrapping.
+The converter joins the title and journal lines only for publications, retaining native list
+numbering and keeping entries together across pages. Authors, titles, and contribution notes
+retain 11 pt type. Other sections retain their existing line wrapping.
 NLM citation content and punctuation remain unchanged; this is a CV layout choice.
 
 **Owner.** [../build_cv.py](../build_cv.py) and [../styles/cv.css](../styles/cv.css).
@@ -204,3 +206,16 @@ duplicate in addition to the separately listed correction. The older 2015 metric
 is retained in the metrics report as history rather than displayed as current.
 
 **Owner.** [../cv/publications.md](../cv/publications.md) and [CITATION_METRICS.md](CITATION_METRICS.md).
+
+### Academic README audience
+
+**Decision.** Lead the README with CV downloads, a factual academic overview, and routes to
+teaching, research, publications, and service. Keep technical instructions in
+[MAINTENANCE.md](MAINTENANCE.md).
+
+**Why.** Academic colleagues are the primary audience for the GitHub landing page.
+
+**Consequence.** Build tools and conversion details remain discoverable through a short link;
+academic visitors do not need to install software to read the CV.
+
+**Owner.** [../README.md](../README.md) and [MAINTENANCE.md](MAINTENANCE.md).

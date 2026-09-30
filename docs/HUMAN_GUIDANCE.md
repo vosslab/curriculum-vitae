@@ -57,3 +57,13 @@ origin belongs there too. Rules: [REPO_STYLE.md](REPO_STYLE.md).
   record count or metrics with independently deduplicated CV totals.
 - The author supplied the WoS-indexed 2018 NSF cryo-EM community gateway grant,
   which identifies Neil Voss as principal investigator.
+- Keep the GitHub README academically focused: prioritize the CV and academic record over
+  developer setup, conversion details, and repository maintenance.
+- Do not feature ORCID near the top of the README; the author gives it low priority.
+- The current department name in 2026 is Department of Biological and Physical Sciences.
+- Reduce publication citation wrapping with smaller journal/identifier type, removing the forced
+  break before the journal name, or both; retain simple Markdown source.
+- Describe Biology Problems in terms of free, open practice questions for students and
+  ready-to-use material for educators, using the author's supplied wording.
+- Always include `--norestore` when invoking `soffice`, including headless DOCX rendering.
+  The installed LibreOffice CLI confirms this spelling; it disables crash recovery.

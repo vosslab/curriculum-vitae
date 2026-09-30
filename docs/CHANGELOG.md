@@ -2,6 +2,18 @@
 
 ### CV publishing
 
+- Recorded the requirement to include `--norestore` in all `soffice` invocations, verified
+  against the installed command's help.
+
+- Joined publication titles to 10 pt journal details and identifier links, preserving 11 pt
+  authors/titles and entry spacing; updated Biology Problems with the author's description.
+
+- Corrected the current affiliation to the author-confirmed 2026 name, Department of
+  Biological and Physical Sciences; retained historical appointment wording.
+
+- Reframed the README around the academic profile, CV downloads, teaching, research, and
+  scholarly sections; moved build and publishing instructions to the maintenance guide.
+
 - Confirmed that the WoS-indexed cryo-EM gateway grant is existing NSF award 1759735;
   added the NSF-verified PI designation and saved the official award response locally.
 

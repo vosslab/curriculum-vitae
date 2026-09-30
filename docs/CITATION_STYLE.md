@@ -17,7 +17,9 @@ restarts under each role; publications and presentations each have their own seq
 ## CV line layout
 
 Keep authors, titles, and journal or meeting details on separate source lines within each entry.
-The converter preserves these line breaks in publications and presentations. Numbered entries
+For publications, the converter keeps the break after the authors but joins journal details to
+the title, setting the journal details and identifiers in 10 pt type. Authors, titles, and
+contribution notes stay at 11 pt. Presentation line breaks remain unchanged. Numbered entries
 have 12 pt of space after them. NLM's examples specify citation elements and punctuation; they do
 not prescribe line wrapping or inter-entry spacing. We use the author's CV layout while retaining
 the citation order and punctuation. See <https://www.nlm.nih.gov/bsd/uniform_requirements.html>.

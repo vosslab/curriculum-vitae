@@ -5,7 +5,7 @@ GitHub account: <https://github.com/vosslab>
 ### Primary/Sole Maintainer
 
 1. **Biology Problems (2025)**
-   ree and open problem sets for Biochemistry, Genetics
+   Free, open biology problem sets that help students practice and give educators ready-to-use questions for courses, homework, quizzes, and learning-management systems.
    *https://biologyproblems.org/*
 
 1. **libproteingeometry: Library for Protein Geometry**

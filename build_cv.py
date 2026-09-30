@@ -177,19 +177,53 @@ def citation_line_breaks(node):
 	return {key: citation_line_breaks(value) for key, value in node.items()}
 
 
+def publication_details(node, output_format):
+	"""Keep authors separate; join the title to smaller bibliographic details."""
+	if isinstance(node, list):
+		return [publication_details(item, output_format) for item in node]
+	if not isinstance(node, dict):
+		return node
+	if node.get("t") in {"Para", "Plain"}:
+		lines = [[]]
+		for item in node["c"]:
+			if item.get("t") == "LineBreak":
+				lines.append([])
+			else:
+				lines[-1].append(item)
+		if len(lines) >= 3:
+			attrs = ["", ["citation-details"], []]
+			if output_format == "docx":
+				attrs[2].append(["custom-style", "CV Citation"])
+				# Hyperlinks override an enclosing character style in Pandoc's DOCX writer.
+				for item in lines[2]:
+					if item.get("t") == "Link":
+						item["c"][1] = [{"t": "Span", "c": [
+							["", [], [["custom-style", "CV Citation Link"]]], item["c"][1]]}]
+			content = (lines[0] + [{"t": "LineBreak"}] + lines[1]
+				+ [{"t": "Space"}, {"t": "Span", "c": [attrs, lines[2]]}])
+			for line in lines[3:]:
+				content.extend([{"t": "LineBreak"}] + line)
+			return {"t": node["t"], "c": content}
+	return {key: publication_details(value, output_format) for key, value in node.items()}
+
+
 def export_document(document, output_format):
 	"""Add output presentation without changing the source content or order."""
 	result = copy.deepcopy(document)
 	selected = student_lists(document)
 	blocks = []
 	in_citations = False
+	in_publications = False
 	for index, original in enumerate(result["blocks"]):
 		block = format_links(original, output_format)
 		if block["t"] == "Header" and block["c"][0] <= 2:
+			in_publications = inline_text(block["c"][2]).casefold() == "publications"
 			in_citations = inline_text(block["c"][2]).casefold() in {
 				"publications", "posters and presentations"}
 		if in_citations and block["t"] == "OrderedList":
 			block = citation_line_breaks(block)
+			if in_publications:
+				block = publication_details(block, output_format)
 		if output_format == "docx" and block["t"] == "Header":
 			if block["c"][0] == 1:
 				block = {"t": "Div", "c": [
@@ -278,6 +312,11 @@ def reference_document(path):
 		if name in {"Hyperlink", "CV URL"}:
 			style.font.color.rgb = RGBColor.from_string("154F83")
 			style.font.underline = True
+	style = doc.styles.add_style("CV Citation", WD_STYLE_TYPE.CHARACTER)
+	style.font.size = Pt(10)
+	style = doc.styles.add_style("CV Citation Link", WD_STYLE_TYPE.CHARACTER)
+	style.base_style = doc.styles["Hyperlink"]
+	style.font.size = Pt(10)
 	p = section.footer.paragraphs[0]
 	p.alignment = WD_ALIGN_PARAGRAPH.RIGHT
 	p.add_run("Neil Voss, curriculum vitae | Page ")
